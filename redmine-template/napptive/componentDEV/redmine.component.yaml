@@ -58,6 +58,11 @@ spec:
               data:
                 user: cm9vdA==
                 password: Y2hhbmdldGhpcw==
+  policies:
+  - name: redmine-test-health
+    type: health
+    properties:
+      probeInterval: 5
 
 
         

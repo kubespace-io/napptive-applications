@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "DokuWiki"
+version: 2022.07.31
+description: DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
+keywords:
+  - "DokuWiki"
+  - "Docs"
+  - "davma"
+  - "davma.io"
+license: "GNU General Public License Version 2"
+url: "https://www.dokuwiki.org/dokuwiki"
+doc: "https://www.dokuwiki.org/install"
+logo:
+  - src: "https://www.dokuwiki.org/lib/tpl/dokuwiki/images/logo.png"
+    type: "image/png"
+    size: "500x500"

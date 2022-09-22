@@ -43,7 +43,7 @@ spec:
           properties:
             replicas: 1
   policies:
-    - name: davmaio-vault-health
+    - name: vault-health
       type: health
       properties:
         probeInterval: 5
