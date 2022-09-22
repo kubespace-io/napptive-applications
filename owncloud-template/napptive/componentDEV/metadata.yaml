@@ -1,0 +1,15 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "ownCloud"
+version: '10.10.0'
+description: ownCloud. The most essential productivity tool since email Store. Share. Work.
+keywords:
+  - "ownCloud"
+  - "davma.io"
+license: "MIT License"
+url: "https://owncloud.com/"
+doc: "https://owncloud.com/docs-guides/"
+logo:
+  - src: "https://leconseilinformatique.fr/wp-content/uploads/2017/09/owncloud-logo-muenchen.png"
+    type: "image/png"
+    size: "500x500"

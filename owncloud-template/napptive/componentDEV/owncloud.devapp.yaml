@@ -1,0 +1,31 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-owncloud-dev
+  annotations:
+    version: '10.10.0'
+    description: "ownCloud. The most essential productivity tool since email Store. Share. Work."
+spec:
+  components:
+  - name: davmaio-owncloud-dev
+
+    type: webservice
+    properties:
+      image: owncloud/server
+      cpu: "1000m" 
+      memory: 2048Mi
+      ports:
+      - port: 8080
+        expose: true
+    traits:
+    - type: napptive-ingress         
+      properties:
+        name: davmaio-owncloud
+        port: 8080
+        path: /
+  policies:
+  - name: davmaio-owncloud-health
+    type: health
+    properties:
+      probeInterval: 5
+      
