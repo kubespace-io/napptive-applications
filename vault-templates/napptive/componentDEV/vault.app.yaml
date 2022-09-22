@@ -1,0 +1,35 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-vault
+  annotations:
+    version: 1.11.2
+    description: "HashiCorp Vault is an identity-based secrets and encryption management system."
+spec:
+  components:
+    - name: davmaio-vault-dev
+      type: webservice
+      properties:
+        image: davma/vault-ui:latest
+        ports:
+          - port: 8200
+            expose: true
+          - port: 8201
+            expose: true
+        cpu: "500m"
+        memory: "500Mi"
+      traits:
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-vault
+            port: 8200
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-vault-health
+      type: health
+      properties:
+        probeInterval: 5

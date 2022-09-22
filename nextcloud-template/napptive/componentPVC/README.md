@@ -2,8 +2,6 @@
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
-For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
-
 Please READ CAREFULLY before deploying.
 
 Deployment of these components is not possible with a free Napptive account.
@@ -20,7 +18,7 @@ __ATTENTION. You should under no circumstances remove this deployment from your 
 
 New versions of this application will only be provided once it has been verified that errors do not occur with the new deployment.
 
-For more info or help [contact](mailto:contact@davma.io).
+For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
 [![Update nextcloud in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml)
 

@@ -1,0 +1,49 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: vault
+  annotations:
+    version: 1.11.2
+    description: "HashiCorp Vault is an identity-based secrets and encryption management system."
+spec:
+  components:
+    - name: davmaio-vault
+      type: webservice
+      properties:
+        image: davma/vault-ui:latest
+        imagePullPolicy: Always
+        ports:
+          - port: 8200
+            expose: true
+          - port: 8201
+            expose: true
+        cpu: "500m"
+        memory: "500Mi"
+      traits:
+        - type: storage
+          properties:
+            pvc: # PVC type storage
+            - name: vault-data # (Required) the name of the pvc
+              accessModes:
+              - ReadWriteOnce
+              mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+              mountPath: /vault # (Required) mount path
+            - name: optvault-data # (Required) the name of the pvc
+              accessModes:
+              - ReadWriteOnce
+              mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+              mountPath: /opt/vault # (Required) mount path
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-vault
+            port: 8200
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-vault-health
+      type: health
+      properties:
+        probeInterval: 5

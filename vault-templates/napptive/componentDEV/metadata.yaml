@@ -1,0 +1,18 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Vault"
+version: 1.11.2
+description: HashiCorp Vault is an identity-based secrets and encryption management system
+keywords:
+  - "Vault"
+  - "secrets"
+  - "identity"
+  - "davma"
+  - "davma.io"
+license: "MPL-2.0 license"
+url: "https://www.vaultproject.io/"
+doc: "https://learn.hashicorp.com/collections/vault/getting-started-ui"
+logo:
+  - src: "https://assets.zabbix.com/img/brands/hashicorp_vault.svg"
+    type: "image/svg"
+    size: "500x500"

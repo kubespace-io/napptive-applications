@@ -1,0 +1,23 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    description: "Please do not delete, you will lose all your data. davma.io-vault storage components for production environments."
+  name: vault-storage
+spec:
+  components:
+    - name: vaultdata
+      type: pvc
+      properties:
+        name: vault-data
+        accessMode: "ReadWriteOnce"
+    - name: optvaultdata
+      type: pvc
+      properties:
+        name: optvault-data
+        accessMode: "ReadWriteOnce"
+  policies:
+  - name: davmaio-pvc-app-health
+    type: health
+    properties:
+      probeInterval: 5
