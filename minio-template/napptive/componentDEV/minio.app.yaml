@@ -1,0 +1,38 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-minio
+  annotations:
+    version: 'latest'
+    description: "MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service"
+spec:
+  components:
+    - name: davmaio-minio
+      type: webservice
+      properties:
+        image: bitnami/minio:latest
+        ports:
+          - port: 9001
+            expose: true
+        cpu: "200m"
+        memory: "256Mi"
+        env:
+          - name: MINIO_ROOT_USER
+            value: davma-minio
+          - name: MINIO_ROOT_PASSWORD
+            value: davma-minio@
+      traits:
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-minio
+            port: 9001
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-minio-health
+      type: health
+      properties:
+        probeInterval: 5

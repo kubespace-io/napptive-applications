@@ -1,0 +1,18 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "MINIO"
+version: 'latest'
+description: MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service
+keywords:
+  - "MINIO"
+  - "storage"
+  - "S3"
+  - "davma"
+  - "davma.io"
+license: "GNU AGPL v3"
+url: "https://hub.docker.com/r/bitnami/minio"
+doc: "https://docs.min.io/"
+logo:
+  - src: "https://min.io/resources/img/logo.svg"
+    type: "image/svg"
+    size: "500x500"
