@@ -1,14 +1,16 @@
 # Nextcloud-test
 
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
+
 </br>
 
 <img src="https://nextcloud.com/media/Nextcloud_Hub_background.png" alt="drawing" width="600"/>
 
 Nextcloud is the most popular on-premises content collaboration platform you can download.
 
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+[![Update nextcloud in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for production environments__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
 For more info or help [contact](mailto:contact@davma.io).
 

@@ -1,5 +1,7 @@
 # Storage components for davmaio-Nextcloud production environment
 
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
+
 Please READ CAREFULLY before deploying.
 
 Deployment of these components is not possible with a free Napptive account.
@@ -18,7 +20,7 @@ New versions of this application will only be provided once it has been verified
 
 For more info or help [contact](mailto:contact@davma.io).
 
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+[![Update nextcloud in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml)
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
