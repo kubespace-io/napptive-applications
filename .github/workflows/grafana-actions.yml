@@ -1,0 +1,32 @@
+name: Update Grafana in to Napptive Playground
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - "grafana-template/napptive/componentDEV/**"
+      - "grafana-template/napptive/componentPROD/**"
+      - "grafana-template/napptive/componentPVC/**"
+jobs:
+  deploy:
+    name: New version upload
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - base: 'application-test'
+            tag: 'DEV'
+          # - base: 'latest'
+          #   tag: 'PROD'
+          # - base: 'storage'
+          #   tag: 'PVC'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: napptive-actions/catalog-push-action@v3.0.1
+        env:
+          PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
+        with:
+          applicationPath: ./grafana-template/napptive/component${{ matrix.tag }}/
+          namespace: "davma-io"
+          applicationName: "Grafana"
+          tag: "${{ matrix.base }}"

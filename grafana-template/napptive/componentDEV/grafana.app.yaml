@@ -1,0 +1,33 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-grafana
+  annotations:
+    version: 9.1.6
+    description: "Grafana is the open source analytics & monitoring solution for every database."
+spec:
+  components:
+    - name: davmaio-grafana
+      type: webservice
+      properties:
+        image: grafana/grafana:latest
+        ports:
+          - port: 3000
+            expose: true
+        cpu: "200m"
+        memory: "256Mi"
+      traits:
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-grafana
+            port: 3000
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-grafana-health
+      type: health
+      properties:
+        probeInterval: 5
