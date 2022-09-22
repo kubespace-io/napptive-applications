@@ -1,0 +1,18 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "n8n"
+version: 2022.6.3
+description: n8n. The workflow automation platform that doesn't box you in, that you never outgrow
+keywords:
+  - "n8n"
+  - "workflow"
+  - "automation"
+  - "davma"
+  - "davma.io"
+license: "Sustainable Use License"
+url: "https://hub.docker.com/r/n8nio/n8n"
+doc: "https://docs.n8n.io/"
+logo:
+  - src: "https://es.community.n8n.io/uploads/default/original/1X/24bf9a7f54c933f36322e44d3317cfe9f7f57b67.png"
+    type: "image/png"
+    size: "500x500"

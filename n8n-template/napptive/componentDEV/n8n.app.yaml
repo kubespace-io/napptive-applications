@@ -1,0 +1,40 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-n8n
+  annotations:
+    version: 0.0.1
+    description: "n8n is a free and open self hostable workflow automation tool"
+spec:
+  components:
+    - name: davmaio-n8n
+      type: webservice
+      properties:
+        image: n8nio/n8n:latest
+        ports:
+          - port: 5678
+            expose: true
+        cpu: "200m"
+        memory: "256Mi"
+        env:
+          - name: N8N_BASIC_AUTH_ACTIVE
+            value: "true"
+          - name: N8N_BASIC_AUTH_USER
+            value: davma-n8n
+          - name: N8N_BASIC_AUTH_PASSWORD
+            value: davma-n8n@
+      traits:
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-n8n
+            port: 5678
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-n8n-health
+      type: health
+      properties:
+        probeInterval: 5
