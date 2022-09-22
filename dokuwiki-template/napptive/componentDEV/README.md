@@ -8,7 +8,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
 
-<!-- [![Update dokuwiki in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml) -->
+[![Update DokuWiki in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
