@@ -21,7 +21,7 @@ For more information, help or specific deployments you can contact [here](mailto
 It is not possible to deploy this version with a free Napptive account
 
 [![Build and push images](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml)
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml)
+[![Update Vault in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/davma/vault-ui?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/vault-ui)
 
 

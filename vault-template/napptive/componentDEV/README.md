@@ -1,4 +1,4 @@
-# Vault
+# Vault-test
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
 
@@ -17,7 +17,7 @@ This application is for development only, it is strongly recommended not to use 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
 [![Build and push images](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml)
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml)
+[![Update Vault in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/davma/vault-ui?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/vault-ui)
 
 ## How to access to Vault
