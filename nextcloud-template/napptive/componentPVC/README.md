@@ -22,7 +22,7 @@ For more info or help [contact](mailto:contact@davma.io).
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1100 Mb of storage available
+- 1500 Mb of storage available
 
 ## References
 * https://nextcloud.com/

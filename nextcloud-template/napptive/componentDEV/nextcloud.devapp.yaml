@@ -57,7 +57,7 @@ spec:
         value: Y2hhbmdldGhpcw==
 
   policies:
-  - name: davmaio-nextcloud-health
+  - name: nextcloud-test-health
     type: health
     properties:
       probeInterval: 5
