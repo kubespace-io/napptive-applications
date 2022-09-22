@@ -12,6 +12,6 @@ license: "GNU General Public License v2 (GPL)."
 url: "https://www.redmine.org/"
 doc: "https://www.redmine.org/projects/redmine/wiki/Guide"
 logo:
-  - src: "https://www.i4development.com.ar/wp-content/uploads/2021/07/logo-redmine2.png"
+  - src: "https://www.drupal.org/files/images/Redmine-Logo-CyberSprocket-Composite-300x300-png8.png"
     type: "image/png"
     size: "500x500"
