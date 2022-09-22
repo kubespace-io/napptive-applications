@@ -1,6 +1,6 @@
 # Nextcloud
 
-Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
 </br>
 
@@ -14,7 +14,7 @@ Nextcloud is the most popular on-premises content collaboration platform you can
 
 __ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE tag__. 
 
-For more info or help [contact](mailto:contact@davma.io).
+For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
 It is not possible to deploy this version with a free Napptive account
 

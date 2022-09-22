@@ -1,6 +1,8 @@
 # Storage components for davmaio-Nextcloud production environment
 
-Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
+
+For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
 Please READ CAREFULLY before deploying.
 
