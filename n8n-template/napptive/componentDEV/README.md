@@ -8,7 +8,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 n8n - Free and open self hostable workflow automation tool  
 
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/n8n-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/n8n-template/actions/workflows/napptive-push.yml)
+[![Update n8n in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/n8n-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/n8n-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 

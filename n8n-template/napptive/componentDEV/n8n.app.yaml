@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: davmaio-n8n
   annotations:
-    version: 0.0.1
+    version: 'latest'
     description: "n8n is a free and open self hostable workflow automation tool"
 spec:
   components:
