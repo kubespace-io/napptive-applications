@@ -8,7 +8,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service.
 
-<!-- [![Update Grafana in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/grafana-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/grafana-actions.yml) -->
+[![Update Minio in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/minio-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/minio-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
