@@ -1,0 +1,93 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: wikijs
+  annotations:
+    version: '2.5.285'
+    description: "Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!"
+spec:
+  components:
+  - name: wikijs
+    dependsOn:
+      - postgres-instance
+    type: webservice
+    properties:
+      image: ghcr.io/requarks/wiki:2
+      cpu: "500m" 
+      memory: 500Mi
+      ports:
+      - port: 3000
+        expose: true
+      env:
+      - name: DB_TYPE
+        value: postgres
+      - name: DB_HOST
+        value: postgres-instance
+      - name: DB_PORT
+        value: '5432'
+      - name: DB_USER
+        value: wikijs
+      - name: DB_NAME
+        value: wiki
+    traits:
+    - type: napptive-ingress         
+      properties:
+        name: davmaio-wikijs
+        port: 3000
+        path: /
+    - type: service-binding
+      properties:
+        envMappings:
+          DB_PASS:
+            secret: postgre-credentials
+            key: password 
+        pvc: # PVC type storage
+          - name: wikijs-data # (Required) the name of the pvc
+            accessModes:
+            - ReadWriteOnce
+            mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+            mountPath: /data # (Required) mount path
+          - name: wikijs-config # (Required) the name of the pvc
+            accessModes:
+            - ReadWriteOnce
+            mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+            mountPath: /config # (Required) mount path
+  - name: postgres-instance
+    type: webservice
+    properties:
+      image: postgres:11-alpine
+      cpu: "250m" 
+      memory: 512Mi
+      ports:
+      - port: 5432
+        expose: true
+      env:
+      - name: POSTGRES_DB
+        value: wiki
+      - name: POSTGRES_USER
+        value: wikijs
+      - name: PGDATA
+        value: /var/lib/postgresql/data/pgdata
+    traits:
+      - type: storage
+        properties:
+          secret:
+            - name: postgre-credentials
+              mountToEnv:
+                envName: POSTGRES_PASSWORD
+                secretKey: password
+              data:
+                password: Y2hhbmdldGhpcw==
+          pvc: # PVC type storage
+            - name: db-data # (Required) the name of the pvc
+              accessModes:
+              - ReadWriteOnce
+              mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+              mountPath: /var/lib/postgresql/data # (Required) mount path
+              subPath: pgdata # important
+  policies:
+  - name: wikijs-health
+    type: health
+    properties:
+      probeInterval: 5
+      

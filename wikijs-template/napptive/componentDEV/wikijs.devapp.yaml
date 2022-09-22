@@ -1,0 +1,71 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-wikijs-dev
+  annotations:
+    version: '2.5.285'
+    description: "Wiki.js The most powerful and extensible open source Wiki software. This deployment does not have storage volumes configured for data persistence. Deploy the prod version for production environments. "
+spec:
+  components:
+  - name: davmaio-wikijs-dev
+    type: webservice
+    properties:
+      image: ghcr.io/requarks/wiki:2
+      cpu: "500m" 
+      memory: 500Mi
+      ports:
+      - port: 3000
+        expose: true
+      env:
+      - name: DB_TYPE
+        value: postgres
+      - name: DB_HOST
+        value: postgres-instance
+      - name: DB_PORT
+        value: '5432'
+      - name: DB_USER
+        value: wikijs
+      - name: DB_NAME
+        value: wiki
+    traits:
+    - type: napptive-ingress         
+      properties:
+        name: davmaio-wikijs
+        port: 3000
+        path: /
+    - type: service-binding
+      properties:
+        envMappings:
+          DB_PASS:
+            secret: postgre-credentials
+            key: password 
+  - name: postgres-instance
+    type: webservice
+    properties:
+      image: postgres:11-alpine
+      cpu: "250m" 
+      memory: 512Mi
+      ports:
+      - port: 5432
+        expose: true
+      env:
+      - name: POSTGRES_DB
+        value: wiki
+      - name: POSTGRES_USER
+        value: wikijs
+    traits:
+      - type: storage
+        properties:
+          secret:
+            - name: postgre-credentials
+              mountToEnv:
+                envName: POSTGRES_PASSWORD
+                secretKey: password
+              data:
+                password: Y2hhbmdldGhpcw==
+  policies:
+  - name: davmaio-wikijsdev-health
+    type: health
+    properties:
+      probeInterval: 5
+      

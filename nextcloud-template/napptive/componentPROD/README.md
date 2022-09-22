@@ -10,7 +10,7 @@ Nextcloud is the most popular on-premises content collaboration platform you can
 
 [![Update nextcloud in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml)
 
- __This version of the application is designed for PRODUCTION ENVIRONMENTS__.  
+ __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
 
 __ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE tag__. 
 
@@ -43,7 +43,10 @@ The following resources need to be available in your environment for a successfu
 * https://js.wiki/
 * https://docs.requarks.io/
 
+## Support Contact
 
+- Email: [contact@davma.io](mailto:contact@davma.io)
+- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
 
 </br>
 </br>

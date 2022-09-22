@@ -12,7 +12,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 Identity-based secrets and encryption management system
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for production environments__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
@@ -56,7 +56,10 @@ The following resources need to be available in your environment for a successfu
 * https://learn.hashicorp.com/vault
 * https://learn.hashicorp.com/collections/vault/getting-started-ui
 
+## Support Contact
 
+- Email: [contact@davma.io](mailto:contact@davma.io)
+- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
 
 </br>
 </br>

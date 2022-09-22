@@ -1,4 +1,4 @@
-# Storage components for davmaio-Vault production environment
+# Storage components for davmaio-Wiki.js production environment
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
@@ -6,12 +6,12 @@ Please READ CAREFULLY before deploying.
 
 Deployment of these components is not possible with a free Napptive account.
 
-Please check that you have at least 800 Mb of storage available in your environment.
+Please check that you have at least 1100 Mb of storage available in your environment.
 
-__ATTENTION. You must launch this version of the application to deploy storage components to the production environment of davma.io-Vault__.
+__ATTENTION. You must launch this version of the application to deploy storage components to the production environment of davma.io-Wiki.js__.
 
 By releasing the storage components separately you are guaranteed.
-- You can kill the davma.io-Vault application without losing the data and use the computing capacity of your environment for other functions.
+- You can kill the davma.io-wiki.js application without losing the data and use the computing capacity of your environment for other functions.
 - You can test future versions/updates quickly by killing the current version and deploying the new one without affecting your stored data.
 
 __ATTENTION. You should under no circumstances remove this deployment from your environment. This will lead to the total loss of your data.__
@@ -20,13 +20,11 @@ New versions of this application will only be provided once it has been verified
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
-[![Build and push images](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml)
-[![Update Vault in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/davma/vault-ui?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/vault-ui)
+[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 800 Mb of storage available
+- 1100 Mb of storage available
 
 ## References
 * https://js.wiki/

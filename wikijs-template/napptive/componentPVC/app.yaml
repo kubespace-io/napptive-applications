@@ -1,0 +1,28 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    description: "Please do not delete, you will lose all your data. davma.io-wiki.js storage components for production environments."
+  name: wikijs-storage
+spec:
+  components:
+    - name: dbdata
+      type: pvc
+      properties:
+        name: db-data
+        accessMode: "ReadWriteOnce"
+    - name: wikijsdata
+      type: pvc
+      properties:
+        name: wikijs-data
+        accessMode: "ReadWriteOnce"
+    - name: wikijsconfig
+      type: pvc
+      properties:
+        name: wikijs-config
+        accessMode: "ReadWriteOnce"
+  policies:
+  - name: davmaio-pvc-app-health
+    type: health
+    properties:
+      probeInterval: 5

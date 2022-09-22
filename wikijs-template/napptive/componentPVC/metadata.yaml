@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Wiki.js"
+version: 'storage'
+description: Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!
+keywords:
+  - "Wiki.js"
+  - "Wiki"
+  - "Wiki.js Storage"
+  - "davma.io"
+license: "AGPL-3.0 license"
+url: "https://js.wiki/"
+doc: "https://docs.requarks.io/"
+logo:
+  - src: "https://static.requarks.io/logo/wikijs-full.svg"
+    type: "image/svg"
+    size: "500x500"
