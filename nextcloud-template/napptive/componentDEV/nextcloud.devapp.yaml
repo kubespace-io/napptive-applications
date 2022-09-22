@@ -1,15 +1,15 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-nextcloud-dev
+  name: davmaio-nextcloud-test
   annotations:
     version: '24.0.5'
     description: "Nextcloud is the most popular on-premises content collaboration platform you can download."
 spec:
   components:
-  - name: davmaio-nextcloud-dev
+  - name: davmaio-nextcloud-test
     dependsOn:
-      - postgres-nextcloud-dev
+      - postgres-nextcloud-test
     type: webservice
     properties:
       image: nextcloud
@@ -24,7 +24,7 @@ spec:
       # - name: NEXTCLOUD_ADMIN_PASSWORD
       #   value: nextcloud.davma.io
       - name: POSTGRES_HOST
-        value: 'postgres-nextcloud-dev'
+        value: 'postgres-nextcloud-test'
       # - name: POSTGRES_PORT
       #   value: '5432'
       - name: POSTGRES_USER
@@ -39,7 +39,7 @@ spec:
         name: davmaio-nextcloud
         port: 80
         path: /
-  - name: postgres-nextcloud-dev
+  - name: postgres-nextcloud-test
     type: webservice
     properties:
       image: postgres

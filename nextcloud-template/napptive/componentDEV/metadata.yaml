@@ -1,6 +1,6 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
-name: "Nextcloud"
+name: "Nextcloud-test"
 version: '24.0.5'
 description: Nextcloud is the most popular on-premises content collaboration platform you can download.
 keywords:
