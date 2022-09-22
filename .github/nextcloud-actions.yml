@@ -4,8 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "nextcloud-template/**"
-      - "!nextcloud-template/README.md"
+      - "nextcloud-template/napptive/componentDEV**"
+      - "nextcloud-template/napptive/componentPROD**"
+      - "nextcloud-template/napptive/componentPVC**"
 jobs:
   deploy:
     name: New version upload
