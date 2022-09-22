@@ -39,7 +39,7 @@ Note: Please remember to change the user/password for the instance. To change cr
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1.5 of cores available
+- 1.5 cores available
 - 1.5 GB of ram available
 
 ## References

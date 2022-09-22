@@ -37,7 +37,7 @@ You can get the full link in endpoints inside component davmaio-wikijs
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 0.5 of cores available
+- 0.5 cores available
 - 500 Mb of ram available
 
 ## References

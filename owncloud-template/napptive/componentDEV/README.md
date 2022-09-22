@@ -39,12 +39,12 @@ Note: Please remember to change the user/password for the instance. To change cr
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1 of cores available
+- 1 cores available
 - 2048 MB of ram available
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1 of cores available
+- 1 cores available
 - 2048 Mb of ram available
 
 ## References

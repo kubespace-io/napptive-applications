@@ -32,7 +32,7 @@ You can get the full link in endpoints inside component davmaio-nextcloud
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1.5 of cores available
+- 1.5 cores available
 - 3072 Mb of ram available
 
 ## References
