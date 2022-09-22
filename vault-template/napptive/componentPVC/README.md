@@ -32,7 +32,7 @@ The following resources need to be available in your environment for a successfu
 * https://js.wiki/
 * https://docs.requarks.io/
 
-## Support Contact
+## Contact Support
 
 - Email: [contact@davma.io](mailto:contact@davma.io)
 - Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
