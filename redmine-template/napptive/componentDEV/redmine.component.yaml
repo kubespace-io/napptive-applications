@@ -1,0 +1,63 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-redmine
+  annotations:
+    version: 5.0.2
+    description: "Redmine is a flexible project management web application."
+spec:
+  components:
+  - name: davmaio-redmine
+    type: webservice
+    dependsOn:
+      - mysql-redmine
+    properties:
+      image: redmine:latest
+      cpu: "1000m" 
+      memory: 1024Mi
+      ports:
+      - port: 3000
+        expose: true
+      env:
+      - name: REDMINE_DB_MYSQL
+        value: "mysql-redmine"
+      # - name: REDMINE_SECRET_KEY_BASE
+      #   value: "davmaio"
+    traits:
+    - type: napptive-ingress         
+      properties:
+        name: davmaio-redmine
+        port: 3000
+        path: /
+    - type: service-binding
+      properties:
+        envMappings:
+          REDMINE_DB_PASSWORD:
+            secret: mysql-credentials
+            key: password 
+  - name: mysql-redmine
+    type: webservice
+    properties:
+      image: mysql:5.7
+      cpu: "500m" 
+      memory: 512Mi
+      ports:
+      - port: 3306
+        expose: true
+      env:
+      - name: MYSQL_DATABASE
+        value: "redmine"
+    traits:
+      - type: storage
+        properties:
+          secret:
+            - name: mysql-credentials
+              mountToEnv:
+                envName: MYSQL_ROOT_PASSWORD
+                secretKey: password
+              data:
+                user: cm9vdA==
+                password: Y2hhbmdldGhpcw==
+
+
+        

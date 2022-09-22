@@ -9,7 +9,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 Wiki.js - The most powerful and extensible open source Wiki software.
 
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+[![Update Wiki.js in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml)
 
  __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
 

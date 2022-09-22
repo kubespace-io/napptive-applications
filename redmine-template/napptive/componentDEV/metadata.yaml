@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Redmine"
+version: 5.0.2
+description: Redmine is a flexible project management web application.
+keywords:
+  - "Redmine"
+  - "Agile methodology"
+  - "davma"
+  - "davma.io"
+license: "GNU General Public License v2 (GPL)."
+url: "https://www.redmine.org/"
+doc: "https://www.redmine.org/projects/redmine/wiki/Guide"
+logo:
+  - src: "https://www.logolynx.com/images/logolynx/cf/cf247997d4ba3c662c77d2e3a61ed33b.jpeg"
+    type: "image/jpeg"
+    size: "500x500"

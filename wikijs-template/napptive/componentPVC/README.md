@@ -20,7 +20,7 @@ New versions of this application will only be provided once it has been verified
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+[![Update Wiki.js in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml)
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:

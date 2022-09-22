@@ -4,7 +4,7 @@ HashiCorp Vault is an identity-based secrets and encryption management system.
 
 [![Build and push images](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/vault-ui/actions/workflows/docker-image.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/davma/vault-ui?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/vault-ui)
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/vault-templates/actions/workflows/napptive-push.yml)
+[![Update Vault in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/vault-actions.yml)
 
 ## Requirements
 
