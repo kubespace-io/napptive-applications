@@ -8,7 +8,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.
 
-<!-- [![Update Redmine in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/wikijs-actions.yml) -->
+[![Update Redmine in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/redmine-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/redmine-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
@@ -29,6 +29,13 @@ https://davmaio-redmine-<active-namespace>.apps.playground.napptive.dev
 ```
 
 You can get the full link in endpoints inside component davmaio-wikijs
+
+## Admin user and first login
+The default credentials are:
+- User: admin
+- Password: admin
+
+Note: Please remember to change the user/password for the instance. To change credentials
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
