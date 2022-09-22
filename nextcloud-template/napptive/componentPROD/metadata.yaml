@@ -1,0 +1,15 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Nextcloud"
+version: '24.0.5'
+description: Nextcloud is the most popular on-premises content collaboration platform you can download.
+keywords:
+  - "Nextcloud"
+  - "davma.io"
+license: "AGPL-3.0 license"
+url: "https://nextcloud.com/"
+doc: "https://nextcloud.com/support/"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Nextcloud_Logo.svg/2560px-Nextcloud_Logo.svg.png"
+    type: "image/png"
+    size: "500x500"

@@ -1,0 +1,76 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: nextcloud-prod
+  annotations:
+    version: '24.0.5'
+    description: "Nextcloud is the most popular on-premises content collaboration platform you can download."
+spec:
+  components:
+  - name: nextcloud-prod
+    type: webservice
+    dependsOn:
+    - postgres-nextcloud
+    properties:
+      image: nextcloud
+      cpu: "1000m" 
+      memory: 2048Mi
+      ports:
+      - port: 80
+        expose: true
+      env:
+      - name: POSTGRES_HOST
+        value: 'postgres-nextcloud'
+      - name: POSTGRES_USER
+        value: postgres
+      - name: POSTGRES_DB
+        value: nextcloud
+      - name: POSTGRES_PASSWORD
+        value: Y2hhbmdldGhpcw==
+    traits:
+    - type: napptive-ingress         
+      properties:
+        name: davmaio-nextcloud
+        port: 80
+        path: /
+    - type: storage
+      properties:
+        pvc: # PVC type storage
+          - name: nextcloud-data # (Required) the name of the pvc
+            accessModes:
+            - ReadWriteOnce
+            mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+            mountPath: /var/www/html # (Required) mount path
+  - name: postgres-nextcloud
+    type: webservice
+    properties:
+      image: postgres:11-alpine
+      cpu: "500m" 
+      memory: 1000Mi
+      ports:
+      - port: 5432
+        expose: true
+      env:
+      - name: POSTGRES_DB
+        value: nextcloud
+      - name: POSTGRES_USER
+        value: postgres
+      - name: POSTGRES_PASSWORD
+        value: Y2hhbmdldGhpcw==
+      - name: PGDATA
+        value: /var/lib/postgresql/data/pgdata
+    traits:
+      - type: storage
+        properties:
+          pvc: # PVC type storage
+            - name: nextcloud-db # (Required) the name of the pvc
+              accessModes:
+              - ReadWriteOnce
+              mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+              mountPath: /var/lib/postgresql/data # (Required) mount path
+              subPath: pgdata
+  policies:
+  - name: nextcloud-health
+    type: health
+    properties:
+      probeInterval: 5

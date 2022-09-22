@@ -1,0 +1,23 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    description: "Please do not delete, you will lose all your data. davma.io-nextcloud storage components for production environments."
+  name: nextcloud-storage
+spec:
+  components:
+    - name: nextclouddbdata
+      type: pvc
+      properties:
+        name: nextcloud-db
+        accessMode: "ReadWriteOnce"
+    - name: nextclouddata
+      type: pvc
+      properties:
+        name: nextcloud-data
+        accessMode: "ReadWriteOnce"
+  policies:
+  - name: davmaio-pvc-nextcloud-health
+    type: health
+    properties:
+      probeInterval: 5
