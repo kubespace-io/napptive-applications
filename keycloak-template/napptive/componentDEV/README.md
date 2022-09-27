@@ -6,9 +6,9 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 <img src="https://www.keycloak.org/resources/images/screen-login.png" alt="drawing" width="600"/>
 
-DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
+Keycloak is a Open Source Identity and Access Management.
 
-<!-- [![Update dokuwiki in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/dokuwiki-actions.yml) -->
+[![Update Keycloak in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/keycloak-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
@@ -17,7 +17,7 @@ For more information, help or specific deployments you can contact [here](mailto
 
 ## How to access to Keycloak
 
-Once the application has been deployed, open the public endpoint navigating through the web UI to select the application, selecting the dokuwiki component, and clicking on the associated Endpoint. Alternatively with the CLI use:
+Once the application has been deployed, open the public endpoint navigating through the web UI to select the application, selecting the keycloak component, and clicking on the associated Endpoint. Alternatively with the CLI use:
 
 ```
 playground apps open davmaio-keycloak
