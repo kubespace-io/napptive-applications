@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Keycloak"
+version: 19.0.2
+description: Open Source Identity and Access Management.
+keywords:
+  - "Keycloak"
+  - "Identity"
+  - "davma"
+  - "davma.io"
+license: "Apache-2.0 license"
+url: "https://www.keycloak.org/"
+doc: "https://www.keycloak.org/documentation"
+logo:
+  - src: "https://www.keycloak.org/resources/images/keycloak_icon_512px.svg"
+    type: "image/svg"
+    size: "500x500"

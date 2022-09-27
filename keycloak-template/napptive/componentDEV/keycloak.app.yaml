@@ -1,0 +1,80 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-keycloak
+  annotations:
+    version: 19.0.2
+    description: "Open Source Identity and Access Management."
+spec:
+  components:
+    - name: davmaio-keycloak
+      type: webservice
+      properties:
+        image: bitnami/keycloak:latest
+        # image: quay.io/keycloak/keycloak:latest
+        # cmd: ["/opt/keycloak/bin/kc.sh", "start-dev"]
+        dependsOn:
+        - postgres-keycloak
+        ports:
+          - port: 8080
+            expose: true
+        cpu: "1500m"
+        memory: "2048Mi"
+        env:
+        - name: KEYCLOAK_CREATE_ADMIN_USER
+          value: "true"
+        - name: KEYCLOAK_ADMIN_USER
+          value: "admin"
+        - name: KEYCLOAK_ADMIN_PASSWORD
+          value: "admin"
+        - name: KEYCLOAK_DATABASE_HOST
+          value: "postgres-keycloak"
+        - name: KEYCLOAK_DATABASE_PORT
+          value: "5432"
+        - name: KEYCLOAK_DATABASE_USER
+          value: "bn_keycloak"
+      traits:
+        - type: service-binding
+          properties:
+            envMappings:
+              KEYCLOAK_DATABASE_PASSWORD:
+                secret: postgre-credentials
+                key: password 
+        - type: napptive-ingress
+          properties:
+            name: davmaio-keycloak
+            port: 8080
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+    - name: postgres-keycloak
+      type: webservice
+      properties:
+        image: postgres:11-alpine
+        cpu: "250m" 
+        memory: 512Mi
+        ports:
+        - port: 5432
+          expose: true
+        env:
+        - name: POSTGRES_DB
+          value: bitnami_keycloak
+        - name: POSTGRES_USER
+          value: bn_keycloak
+      traits:
+        - type: storage
+          properties:
+            secret:
+              - name: postgre-credentials
+                mountToEnv:
+                  envName: POSTGRES_PASSWORD
+                  secretKey: password
+                data:
+                  password: Y2hhbmdldGhpcw==
+  policies:
+    - name: davmaio-keycloak-health
+      type: health
+      properties:
+        probeInterval: 5
