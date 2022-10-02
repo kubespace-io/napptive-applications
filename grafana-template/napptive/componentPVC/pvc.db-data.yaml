@@ -1,0 +1,55 @@
+apiVersion: core.oam.dev/v1beta1
+kind: ComponentDefinition
+metadata:
+  annotations:
+    definition.oam.dev/description: Creates a PVC.
+  name: grafanadata
+spec:
+  schematic:
+    cue:
+      template: |
+        output: {
+        	apiVersion: "v1"
+        	kind:       "PersistentVolumeClaim"
+        	metadata: {
+        				labels: {
+        					if parameter.labels != _|_ {
+        						parameter.labels
+        					}
+        					"app.oam.dev/name":      context.appName
+        					"app.oam.dev/component": context.name
+        				}
+        				if parameter.annotations != _|_ {
+        					annotations: parameter.annotations
+        				}
+        				name: parameter.name
+        			}
+        	spec: {
+        		accessModes: [parameter.accessMode]
+        		resources:
+        			requests:
+        				storage: 400Mi
+        	}
+        }
+        parameter: {
+        	// +usage=Specify the labels in the workload
+        	labels?: [string]: string
+
+        	// +usage=Specify the annotations in the workload
+        	annotations?: [string]: string
+
+        	// +usage=Specify the size of the required storage
+        	size: *"400Mi" | string
+
+        	// +usage=The name for the pvc
+        	name: string
+
+        	// +usage=The access mode for the PVC.
+        	accessMode: *"ReadWriteOnce" | "ReadOnlyMany" | "ReadWriteMany" | "ReadWriteOncePod"
+        }
+  workload:
+    definition:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+
+

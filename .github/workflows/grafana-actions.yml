@@ -16,10 +16,10 @@ jobs:
         include:
           - base: 'application-test'
             tag: 'DEV'
-          # - base: 'latest'
-          #   tag: 'PROD'
-          # - base: 'storage'
-          #   tag: 'PVC'
+          - base: 'latest'
+            tag: 'PROD'
+          - base: 'storage'
+            tag: 'PVC'
     steps:
       - uses: actions/checkout@v2
       - uses: napptive-actions/catalog-push-action@v3.0.1

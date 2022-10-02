@@ -1,0 +1,18 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "GRAFANA"
+version: 9.1.6
+description: Grafana is the open source analytics & monitoring solution for every database.
+keywords:
+  - "Grafana"
+  - "Analytics"
+  - "Barchart"
+  - "davma"
+  - "davma.io"
+license: "AGPL-3.0 license"
+url: "https://hub.docker.com/r/grafana/grafana"
+doc: "https://grafana.com/docs/"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png"
+    type: "image/png"
+    size: "500x500"
