@@ -28,7 +28,7 @@ spec:
         		accessModes: [parameter.accessMode]
         		resources:
         			requests:
-        				storage: parameter.size
+        				storage: 100Mi
         	}
         }
         parameter: {

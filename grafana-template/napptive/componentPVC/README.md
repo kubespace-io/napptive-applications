@@ -6,7 +6,7 @@ Please READ CAREFULLY before deploying.
 
 Deployment of these components is not possible with a free Napptive account.
 
-Please check that you have at least 1100 Mb of storage available in your environment.
+Please check that you have at least 400 Mb of storage available in your environment.
 
 __ATTENTION. You must launch this version of the application to deploy storage components to the production environment of davma.io-grafana__.
 
