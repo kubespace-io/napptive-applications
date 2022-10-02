@@ -2,7 +2,7 @@ apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
   annotations:
-    description: "Please do not delete, you will lose all your data. davma.io-wiki.js storage components for production environments."
+    description: "Please do not delete, you will lose all your data. davma.io-grafana storage components for production environments."
   name: grafana-storage
 spec:
   components:
