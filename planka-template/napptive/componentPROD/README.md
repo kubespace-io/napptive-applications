@@ -2,15 +2,19 @@
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io). 
 
-__Important__: Before deployment the application, you must modify the environment variable BASE_URL for your access url ``https://<nameapp>-<active-namespace>.apps.playground.napptive.dev``. If you don't do this before deployment Planka won't be accessible
+__Important__: Before deployment the application, you must modify the environment variable BASE_URL for your access url 
+```
+https://<nameapp>-<active-namespace>.apps.playground.napptive.dev
+```
+If you don't do this before deployment Planka won't be accessible.
 
 </br>
 
-<img src="plankaban.png" alt="drawing" width="800"/>
+<img src="https://raw.githubusercontent.com/plankanban/planka/master/demo.gif" alt="drawing" width="800"/>
 
 Planka is a free open source kanban board for workgroups.
 
-<!-- [![Update planka in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml) -->
+[![Update Planka in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml)
 
  __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
 
