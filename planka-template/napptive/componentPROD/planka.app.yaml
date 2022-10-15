@@ -1,0 +1,86 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-planka
+  annotations:
+    version: 1.8.4
+    description: "Open Source Identity and Access Management."
+spec:
+  components:
+    - name: davmaio-planka
+      type: webservice
+      properties:
+        image: ghcr.io/plankanban/planka:latest
+        dependsOn:
+        - postgres-planka
+        ports:
+          - port: 1337
+            expose: true
+        cpu: "1000m"
+        memory: "2048Mi"
+        env:
+        - name: BASE_URL
+          value: "https://<nameapp>-<active-namespace>.apps.playground.napptive.dev"
+        # - name: TRUST_PROXY
+        #   value: "0"
+        - name: DATABASE_URL
+          value: "postgresql://postgres@postgres-planka:5432/planka"
+        - name: planka_ADMIN_PASSWORD
+          value: "admin"
+        - name: SECRET_KEY
+          value: "notsecretkey"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: davmaio-planka
+            port: 1337
+            path: /
+            rewritePath: /
+        - type: storage
+          properties:
+            pvc: # PVC type storage
+              - name: planka-data1 # (Required) the name of the pvc
+                accessModes:
+                - ReadWriteOnce
+                mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+                mountPath: /app/public # (Required) mount path
+        - type: storage
+          properties:
+            pvc: # PVC type storage
+              - name: planka-data2 # (Required) the name of the pvc
+                accessModes:
+                - ReadWriteOnce
+                mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+                mountPath: /app/private/attachments # (Required) mount path
+        - type: scaler
+          properties:
+            replicas: 1
+    - name: postgres-planka
+      type: webservice
+      properties:
+        image: postgres:alpine
+        cpu: "250m" 
+        memory: 512Mi
+        ports:
+        - port: 5432
+          expose: true
+        env:
+        - name: POSTGRES_DB
+          value: "planka"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: "trust"
+      traits:
+      - type: storage
+        properties:
+          pvc: # PVC type storage
+            - name: planka-db # (Required) the name of the pvc
+              accessModes:
+              - ReadWriteOnce
+              mountOnly: True # (Optional) Flag to indicate if the PVC has to be mounted or also created. False by default
+              mountPath: /var/lib/postgresql/data # (Required) mount path
+              subPath: pgdata # important
+  policies:
+    - name: davmaio-planka-health
+      type: health
+      properties:
+        probeInterval: 5

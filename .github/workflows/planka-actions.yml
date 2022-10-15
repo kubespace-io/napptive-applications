@@ -1,0 +1,32 @@
+name: Update Planka in to Napptive Playground
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - "planka-template/napptive/componentDEV/**"
+      - "planka-template/napptive/componentPROD/**"
+      - "planka-template/napptive/componentPVC/**"
+jobs:
+  deploy:
+    name: New version upload
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - base: 'application-test'
+            tag: 'DEV'
+          - base: 'latest'
+            tag: 'PROD'
+          - base: 'storage'
+            tag: 'PVC'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: napptive-actions/catalog-push-action@v3.0.1
+        env:
+          PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
+        with:
+          applicationPath: ./planka-template/napptive/component${{ matrix.tag }}/
+          namespace: "davma-io"
+          applicationName: "Planka"
+          tag: "${{ matrix.base }}"

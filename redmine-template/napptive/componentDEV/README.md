@@ -59,22 +59,3 @@ The following resources need to be available in your environment for a successfu
 </br>
 </br>
 </br>
-
-
-
-
-
-
-
-
-
-
-<!--    
-
-        playground login --patFile D:/Github/no-git/napptive-cli/test_pat.dat
-        kubectl --kubeconfig napptive-cli/napptive-kubeconfig create -f napptive-n8n/component/
-
-        playground catalog push davma-io/n8n:v1.0 napptive-n8n/component/
-        playground catalog remove davma-io/n8n:v1.
-        
--->

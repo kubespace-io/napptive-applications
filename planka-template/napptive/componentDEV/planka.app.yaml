@@ -1,0 +1,60 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-planka
+  annotations:
+    version: 1.8.4
+    description: "Open Source Identity and Access Management."
+spec:
+  components:
+    - name: davmaio-planka
+      type: webservice
+      properties:
+        image: ghcr.io/plankanban/planka:latest
+        dependsOn:
+        - postgres-planka
+        ports:
+          - port: 1337
+            expose: true
+        cpu: "1000m"
+        memory: "2048Mi"
+        env:
+        - name: BASE_URL
+          value: "https://<nameapp>-<active-namespace>.apps.playground.napptive.dev"
+        # - name: TRUST_PROXY
+        #   value: "0"
+        - name: DATABASE_URL
+          value: "postgresql://postgres@postgres-planka:5432/planka"
+        - name: planka_ADMIN_PASSWORD
+          value: "admin"
+        - name: SECRET_KEY
+          value: "notsecretkey"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: davmaio-planka
+            port: 1337
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+    - name: postgres-planka
+      type: webservice
+      properties:
+        image: postgres:alpine
+        cpu: "250m" 
+        memory: 512Mi
+        ports:
+        - port: 5432
+          expose: true
+        env:
+        - name: POSTGRES_DB
+          value: "planka"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: "trust"
+  policies:
+    - name: davmaio-planka-health
+      type: health
+      properties:
+        probeInterval: 5

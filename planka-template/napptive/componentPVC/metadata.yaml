@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Planka"
+version: 'storage'
+description: Planka The most powerful and extensible open source Wiki software. Make documentation a joy to write using Planka's beautiful and intuitive interface!
+keywords:
+  - "Planka"
+  - "Planka Storage"
+  - "davma"
+  - "davma.io"
+license: " MIT license"
+url: "https://planka.app"
+doc: "https://github.com/plankanban/planka"
+logo:
+  - src: "https://uploads-ssl.webflow.com/6220c55c69733896bb8a4724/625569eb2ede14cfaa96ace6_a8b311df.png"
+    type: "image/png"
+    size: "500x500"

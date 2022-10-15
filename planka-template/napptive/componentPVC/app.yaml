@@ -1,0 +1,28 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    description: "Please do not delete, you will lose all your data. davma.io-planka storage components for production environments."
+  name: planka-storage
+spec:
+  components:
+    - name: plankadb
+      type: pvc
+      properties:
+        name: planka-db
+        accessMode: "ReadWriteOnce"
+    - name: plankadata1
+      type: pvc
+      properties:
+        name: planka-data1
+        accessMode: "ReadWriteOnce"
+    - name: plankadata2
+      type: pvc
+      properties:
+        name: planka-data2
+        accessMode: "ReadWriteOnce"
+  policies:
+  - name: davmaio-pvc-planka-health
+    type: health
+    properties:
+      probeInterval: 5
