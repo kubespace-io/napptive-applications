@@ -22,7 +22,7 @@ jobs:
             tag: 'PVC'
     steps:
       - uses: actions/checkout@v2
-      - uses: napptive-actions/catalog-push-action@v3.0.1
+      - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
