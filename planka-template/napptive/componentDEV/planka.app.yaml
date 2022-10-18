@@ -16,7 +16,7 @@ spec:
         ports:
           - port: 1337
             expose: true
-        cpu: "1000m"
+        cpu: "1500m"
         memory: "2048Mi"
         env:
         - name: BASE_URL
@@ -43,7 +43,7 @@ spec:
       type: webservice
       properties:
         image: postgres:alpine
-        cpu: "250m" 
+        cpu: "500m" 
         memory: 512Mi
         ports:
         - port: 5432
