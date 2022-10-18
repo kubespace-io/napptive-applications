@@ -7,12 +7,12 @@ metadata:
 spec:
   components:
     - name: nextclouddbdata
-      type: pvc
+      type: nextclouddbdata
       properties:
         name: nextcloud-db
         accessMode: "ReadWriteOnce"
     - name: nextclouddata
-      type: pvc
+      type: nextclouddata
       properties:
         name: nextcloud-data
         accessMode: "ReadWriteOnce"

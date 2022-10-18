@@ -7,17 +7,17 @@ metadata:
 spec:
   components:
     - name: plankadb
-      type: pvc
+      type: plankadb
       properties:
         name: planka-db
         accessMode: "ReadWriteOnce"
     - name: plankadata1
-      type: pvc
+      type: plankadata1
       properties:
         name: planka-data1
         accessMode: "ReadWriteOnce"
     - name: plankadata2
-      type: pvc
+      type: plankadata2
       properties:
         name: planka-data2
         accessMode: "ReadWriteOnce"

@@ -7,17 +7,17 @@ metadata:
 spec:
   components:
     - name: dbdata
-      type: pvc
+      type: dbdata
       properties:
         name: db-data
         accessMode: "ReadWriteOnce"
     - name: wikijsdata
-      type: pvc
+      type: wikijsdata
       properties:
         name: wikijs-data
         accessMode: "ReadWriteOnce"
     - name: wikijsconfig
-      type: pvc
+      type: wikijsconfig
       properties:
         name: wikijs-config
         accessMode: "ReadWriteOnce"
