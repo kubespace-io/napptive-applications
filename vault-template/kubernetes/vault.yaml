@@ -1,0 +1,50 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault-deployment
+  labels:
+    app: vault
+    project: vault-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vault
+  template:
+    metadata:
+      labels:
+        app: vault
+    spec:
+      containers:
+      - name: vault
+        image: davma/vault-ui:latest
+        ports:
+        - containerPort: 8200
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: vault
+    project: vault-system
+  name: vault
+  namespace: default
+spec:
+  ports:
+  - port: 8200
+    protocol: TCP
+    targetPort: 8200
+  selector:
+    app: vault
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
