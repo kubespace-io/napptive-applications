@@ -10,7 +10,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
 
-<!-- [![Update Trilium in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml) -->
+[![Update Trilium in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
