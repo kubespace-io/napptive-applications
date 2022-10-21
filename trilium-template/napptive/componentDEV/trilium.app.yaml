@@ -1,0 +1,36 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-trilium
+  annotations:
+    version: 0.55.1
+    description: "Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases."
+spec:
+  components:
+    - name: davmaio-trilium
+      type: webservice
+      properties:
+        image: zadam/trilium:latest
+        ports:
+          - port: 8080
+            expose: true
+        cpu: "1000m"
+        memory: "2048Mi"
+        env:
+        - name: TRILIUM_DATA_DIR
+          value: "/home/node/trilium-data"
+      traits:
+        - type: napptive-ingress
+          properties:
+            name: davmaio-trilium
+            port: 8080
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+  policies:
+    - name: davmaio-trilium-health
+      type: health
+      properties:
+        probeInterval: 5

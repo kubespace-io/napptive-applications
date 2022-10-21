@@ -1,0 +1,18 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Trilium"
+version: "sorage"
+description: Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
+keywords:
+  - "Trilium"
+  - "Trilium Storage"
+  - "notes"
+  - "davma"
+  - "davma.io"
+license: "AGPL-3.0 license"
+url: "https://github.com/zadam/trilium"
+doc: "https://github.com/zadam/trilium/wiki/Document"
+logo:
+  - src: "https://artifacthub.io/image/7316d8ad-d87b-417b-a89f-781a19df03d6@3x"
+    type: "image/png"
+    size: "500x500"
