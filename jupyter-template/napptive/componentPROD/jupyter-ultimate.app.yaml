@@ -1,0 +1,52 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: davmaio-jupyter
+  annotations:
+    version: 1.1.0
+    description: "Jupyter Notebook is a web-based interactive computing platform."
+spec:
+  components:
+    - name: davmaio-jupyter
+      type: webservice
+      properties:
+        image: davma/jupyter-ultimate:latest
+        ports:
+          - port: 8888
+            expose: true
+        cpu: "1000m"
+        memory: "1000Mi"
+      traits:
+        - type: json-patch
+          properties:
+            operations:
+            - op: add
+              path: /spec/template/spec/securityContext
+              value:
+                runAsUser: 472
+                runAsGroup: 472
+                fsGroup: 472
+                supplementalGroups:
+                  - 0
+        - type: napptive-ingress         
+          properties:
+            name: davmaio-jupyter
+            port: 8888
+            path: /
+            rewritePath: /
+        - type: scaler
+          properties:
+            replicas: 1
+        - type: storage
+          properties:
+            pvc:
+              - name: jupyter-data
+                accessModes:
+                - ReadWriteOnce
+                mountOnly: True
+                mountPath: /home/jovyan
+  policies:
+    - name: davmaio-jupyter-health
+      type: health
+      properties:
+        probeInterval: 5

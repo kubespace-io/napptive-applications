@@ -1,0 +1,21 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "JUPYTER-Ultimate"
+version: '3.10'
+description: Jupyter Notebook is a web-based interactive computing platform. This image has been modified and has several extra components for DevOps tasks.
+keywords:
+  - "Jupyter"
+  - "Ansible"
+  - "Terraform"
+  - "Napptive CLI"
+  - "automation IT"
+  - "python"
+  - "davma"
+  - "davma.io"
+license: "GPL-3.0 license"
+url: "https://jupyter.org/"
+doc: "https://docs.jupyter.org/en/latest/index.html"
+logo:
+  - src: "https://storage.googleapis.com/artifacts.playground.napptive.dev/logos/jupyter.svg"
+    type: "image/svg"
+    size: "44x51"

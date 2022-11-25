@@ -1,0 +1,18 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    description: "Please do not delete, you will lose all your data. davma.io-jupyter storage components for production environments."
+  name: jupyter-storage
+spec:
+  components:
+    - name: jupyterdata
+      type: jupyterdata
+      properties:
+        name: jupyter-data
+        accessMode: "ReadWriteOnce"
+  policies:
+  - name: davmaio-pvc-jupyter-health
+    type: health
+    properties:
+      probeInterval: 5

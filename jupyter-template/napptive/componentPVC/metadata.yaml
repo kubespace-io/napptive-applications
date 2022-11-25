@@ -1,0 +1,19 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "JUPYTER-ANSIBLE"
+version: 'storage'
+description: Jupyter Notebook is a web-based interactive computing platform. Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain.
+keywords:
+  - "Jupyter"
+  - "Ansible"
+  - "automation IT"
+  - "python"
+  - "davma"
+  - "davma.io"
+license: "GPL-3.0 license"
+url: "https://jupyter.org/"
+doc: "https://docs.jupyter.org/en/latest/index.html"
+logo:
+  - src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png"
+    type: "image/png"
+    size: "500x500"

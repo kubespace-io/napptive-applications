@@ -1,21 +1,25 @@
-name: Update Grafana in to Napptive Playground
+name: Update Jupyter to Napptive Playground
 on:
   push:
     branches:
       - 'main'
     paths:
-      - "grafana-template/napptive/componentDEV/**"
-      - "grafana-template/napptive/componentPROD/**"
-      - "grafana-template/napptive/componentPVC/**"
+      - "jupyter-template/napptive/component310/**"
+      - "jupyter-template/napptive/componentPROD/**"
+      - "jupyter-template/napptive/componentPVC/**"
 jobs:
   deploy:
-    name: New version upload
+    name: Upload new version to the catalog
     runs-on: ubuntu-latest
     strategy:
       matrix:
         include:
           - base: 'application-test'
-            tag: 'DEV'
+            tag: '310'
+          # - base: 'v3.9'
+          #   tag: '39'
+          # - base: 'v3.8'
+          #   tag: '38'
           - base: 'latest'
             tag: 'PROD'
           - base: 'storage'
@@ -26,7 +30,7 @@ jobs:
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./grafana-template/napptive/component${{ matrix.tag }}/
+          applicationPath: ./jupyter-template/napptive/component${{ matrix.tag }}/
           namespace: "davma-io"
-          applicationName: "Grafana"
+          applicationName: "Jupyter"
           tag: "${{ matrix.base }}"
