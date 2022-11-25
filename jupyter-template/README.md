@@ -15,11 +15,9 @@ Jupiter-TensorFlow deployment with a single click in NAPPTIVE. Once registered o
 
 This app will deploy a Jupyter instance with python 3.8 / 3.9 / 3.10, tensorflow and pyodbc 4.0.30 pre-installed
 
-[![Build and push images](https://github.com/davma-io-images/jupyter-tensorflow-pyodbc/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/jupyter-tensorflow-pyodbc/actions/workflows/docker-image.yml)
-
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/jupyter-templates/actions/workflows/jupiterTF-napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/jupyter-templates/actions/workflows/jupiterTF-napptive-push.yml)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/davma/jupyter-tensorflow-pyodbc?logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/davma/jupyter-tensorflow-pyodbc)  
+[![Build jupyter-ultimate](https://github.com/davma-io-images/jupyterlab/actions/workflows/jupyter-ultimate.yml/badge.svg)](https://github.com/davma-io-images/jupyterlab/actions/workflows/jupyter-ultimate.yml)
+[![Update Jupyter to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/davma/jupyter-ultimate?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/jupyter-ultimate) 
 
 Jupyter Notebook is a web-based interactive computing platform.
 

@@ -14,8 +14,8 @@ Deployment in the catalog and configuration and in some cases the container imag
 __Jupyter Notebook is a web-based interactive computing platform.__
 
 [![Build jupyter-ultimate](https://github.com/davma-io-images/jupyterlab/actions/workflows/jupyter-ultimate.yml/badge.svg)](https://github.com/davma-io-images/jupyterlab/actions/workflows/jupyter-ultimate.yml)
-[![Update application to Napptive Playground](https://github.com/davma-io-templates/jupyter-templates/actions/workflows/jupiterA-napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/jupyter-templates/actions/workflows/jupiterA-napptive-push.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/davma/jupyter-ultimate?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/jupyter-ultimate) 
+[![Update Jupyter to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/davma/jupyter-ultimate?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/jupyter-ultimate)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
@@ -66,7 +66,7 @@ https://davmaio-jupytertest-<active-namespace>.apps.playground.napptive.dev
 * https://docs.ansible.com/
 * https://www.terraform.io/intro
 * https://docs.jupyter.org/en/latest/index.html
-* https://hub.docker.com/r/davma/jupyter-ansible-tf
+
 
 </br>
 </br>
