@@ -4,9 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "nextcloud-template/napptive/componentDEV/**"
-      - "nextcloud-template/napptive/componentPROD/**"
-      - "nextcloud-template/napptive/componentPVC/**"
+      - "nextcloud/napptive/trialComponent/**"
+      - "nextcloud/napptive/componentPROD/**"
+      - "nextcloud/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: 'application-test'
-            tag: 'DEV'
+          - base: 'trial'
+            tag: 'trial'
           - base: 'latest'
-            tag: 'PROD'
+            tag: 'prod'
           - base: 'storage'
-            tag: 'PVC'
+            tag: 'pvc'
     steps:
       - uses: actions/checkout@v3
       - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./nextcloud-template/napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
+          applicationPath: ./nextcloud/napptive/${{ matrix.tag }}Component/
+          namespace: "kubespace"
           applicationName: "Nextcloud"
           tag: "${{ matrix.base }}"

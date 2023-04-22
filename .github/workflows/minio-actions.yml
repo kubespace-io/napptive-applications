@@ -4,9 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "minio-template/napptive/componentDEV/**"
-      - "minio-template/napptive/componentPROD/**"
-      - "minio-template/napptive/componentPVC/**"
+      - "minio/napptive/trialComponent/**"
+      - "minio/napptive/componentPROD/**"
+      - "minio/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: 'application-test'
-            tag: 'DEV'
+          - base: 'trial'
+            tag: 'trial'
           # - base: 'latest'
-          #   tag: 'PROD'
+          #   tag: 'prod'
           # - base: 'storage'
-          #   tag: 'PVC'
+          #   tag: 'pvc'
     steps:
       - uses: actions/checkout@v3
       - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./minio-template/napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
+          applicationPath: ./minio/napptive/${{ matrix.tag }}Component/
+          namespace: "kubespace"
           applicationName: "MinIO"
           tag: "${{ matrix.base }}"

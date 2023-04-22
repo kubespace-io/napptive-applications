@@ -1,4 +1,4 @@
-# Napptive Templates
+# NAPPTIVE applications
 Currently, this repository is exclusively maintained by [davma.io](https://github.com/davma-io)
 
 ## Repository purpose
@@ -18,5 +18,8 @@ To deploy the components of this repository you will need an account on the [Nap
 
 ## Contact Support
 
-- Email: [contact@davma.io](mailto:contact@davma.io)
+- Organization's email: [info@kubespace.io](mailto:info@kubespace.io)
+- Owner email: [contact@davma.io](mailto:contact@davma.io)
 - Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
+
+<img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-black.png" width="600"/>

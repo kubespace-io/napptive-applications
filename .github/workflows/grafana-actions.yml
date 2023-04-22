@@ -4,9 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "grafana-template/napptive/componentDEV/**"
-      - "grafana-template/napptive/componentPROD/**"
-      - "grafana-template/napptive/componentPVC/**"
+      - "grafana/napptive/trialComponent/**"
+      - "grafana/napptive/componentPROD/**"
+      - "grafana/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: 'application-test'
-            tag: 'DEV'
+          - base: 'trial'
+            tag: 'trial'
           - base: 'latest'
-            tag: 'PROD'
+            tag: 'prod'
           - base: 'storage'
-            tag: 'PVC'
+            tag: 'pvc'
     steps:
       - uses: actions/checkout@v3
       - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./grafana-template/napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
+          applicationPath: ./grafana/napptive/${{ matrix.tag }}Component/
+          namespace: "kubespace"
           applicationName: "Grafana"
           tag: "${{ matrix.base }}"
