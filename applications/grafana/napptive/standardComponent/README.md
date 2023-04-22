@@ -11,7 +11,9 @@ Grafana is the open source analytics & monitoring solution for every database.
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](https://github.com/davma-io)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the standard version for data persistence__. 
+ __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
+
+__ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE tag__. 
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
@@ -39,8 +41,8 @@ Note: Please remember to change the user/password for the instance. To change cr
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 0.2 cores available
-- 256 MB of ram available
+- 0.5 cores available
+- 1024 MB of ram available
 
 ## References
 * https://grafana.com/

@@ -2,20 +2,20 @@ apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
   annotations:
-    version: 9.1.6
+    version: 9.3.0
     description: "Grafana is the open source analytics & monitoring solution for every database."
-  name: davmaio-grafana
+  name: kubespace-grafana
 spec:
   components:
-    - name: davmaio-grafana
+    - name: kubespace-grafana
       type: webservice
       properties:
         image: grafana/grafana:latest
         ports:
           - port: 3000
             expose: true
-        cpu: "200m"
-        memory: "256Mi"
+        cpu: "500m"
+        memory: "1024Mi"
       traits:
         - type: json-patch
           properties:
@@ -30,7 +30,7 @@ spec:
                   - 0
         - type: napptive-ingress
           properties:
-            name: davmaio-grafana
+            name: kubespace-grafana
             port: 3000
             path: /
             rewritePath: /
@@ -45,11 +45,8 @@ spec:
                 - ReadWriteOnce
                 mountOnly: True
                 mountPath: /var/lib/grafana
-                # resources:
-                #   requests:
-                #     storage: 250Mi
   policies:
-    - name: davmaio-grafana-health
+    - name: grafana-health
       type: health
       properties:
         probeInterval: 5
