@@ -4,9 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "owncloud-template/napptive/componentDEV/**"
-      - "owncloud-template/napptive/componentPROD/**"
-      - "owncloud-template/napptive/componentPVC/**"
+      - "owncloud/napptive/trialComponent/**"
+      - "owncloud/napptive/componentPROD/**"
+      - "owncloud/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: 'application-test'
-            tag: 'DEV'
+          - base: 'trial'
+            tag: 'trial'
           # - base: 'latest'
-          #   tag: 'PROD'
+          #   tag: 'prod'
           # - base: 'storage'
-          #   tag: 'PVC'
+          #   tag: 'pvc'
     steps:
       - uses: actions/checkout@v3
       - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./owncloud-template/napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
+          applicationPath: ./owncloud/napptive/${{ matrix.tag }}Component/
+          namespace: "kubespace"
           applicationName: "ownCloud"
           tag: "${{ matrix.base }}"

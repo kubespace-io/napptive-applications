@@ -4,9 +4,9 @@ on:
     branches:
       - 'main'
     paths:
-      - "wikijs-template/napptive/componentDEV/**"
-      - "wikijs-template/napptive/componentPROD/**"
-      - "wikijs-template/napptive/componentPVC/**"
+      - "wikijs/napptive/trialComponent/**"
+      - "wikijs/napptive/componentPROD/**"
+      - "wikijs/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: 'application-test'
-            tag: 'DEV'
+          - base: 'trial'
+            tag: 'trial'
           - base: 'latest'
-            tag: 'PROD'
+            tag: 'prod'
           - base: 'storage'
-            tag: 'PVC'
+            tag: 'pvc'
     steps:
       - uses: actions/checkout@v3
       - uses: napptive-actions/catalog-push-action@v4.2.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./wikijs-template/napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
+          applicationPath: ./wikijs/napptive/${{ matrix.tag }}Component/
+          namespace: "kubespace"
           applicationName: "Wiki.js"
           tag: "${{ matrix.base }}"
