@@ -11,8 +11,3 @@ spec:
       properties:
         name: pvc-grafana
         accessMode: "ReadWriteOnce"
-  # policies:
-  # - name: pvc-grafana-health
-  #   type: health
-  #   properties:
-  #     probeInterval: 5
