@@ -21,8 +21,8 @@ jobs:
           - base: 'storage'
             tag: 'pvc'
     steps:
-      - uses: actions/checkout@v3
-      - uses: napptive-actions/catalog-push-action@v4.2.0
+      - uses: actions/checkout@v2
+      - uses: napptive-actions/catalog-push-action@v5.0.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
