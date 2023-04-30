@@ -2,7 +2,7 @@ apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
   annotations:
-    description: "Please do not delete, you will lose all your data. davma.io-grafana storage components for production environments."
+    description: "Please do not delete, you will lose all your data. kubespace-grafana storage components for production environments."
   name: grafana-storage
 spec:
   components:
@@ -11,8 +11,8 @@ spec:
       properties:
         name: pvc-grafana
         accessMode: "ReadWriteOnce"
-  policies:
-  - name: davmaio-pvc-app-health
-    type: health
-    properties:
-      probeInterval: 5
+  # policies:
+  # - name: pvc-grafana-health
+  #   type: health
+  #   properties:
+  #     probeInterval: 5
