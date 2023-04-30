@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "repository-redesign",
-        "github-actions"
+        "github-actions",
+        "yaml-component"
     ]
 }
