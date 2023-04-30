@@ -20,7 +20,7 @@ New versions of this application will only be provided once it has been verified
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
-[![Update Grafana in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/grafana-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/grafana-actions.yml)
+[![Grafana](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml)
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
@@ -32,14 +32,15 @@ The following resources need to be available in your environment for a successfu
 
 ## Contact Support
 
-- Email: [contact@davma.io](mailto:contact@davma.io)
-- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
+- Organization's email: [info@kubespace.io](mailto:info@kubespace.io)
+- Owner email: [contact@davma.io](mailto:contact@davma.io)
+- Slack: [kubespace.io](https://join.slack.com/t/kubespaceio/shared_invite/zt-1twwd0egh-L8Hz1qz__BJXPQqOUdy3JA)
 
 </br>
 </br>
 </br>
 
-![https://github.com/davma-io](https://davma.io/wp-content/uploads/2022/05/davma.io6_-e1659187814635.png)
+![https://github.com/kubespace-io](https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-white.png)
 </br>
 </br>
 </br>
