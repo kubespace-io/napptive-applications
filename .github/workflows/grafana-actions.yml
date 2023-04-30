@@ -1,4 +1,4 @@
-name: Upgrade Grafana to Napptive
+name: Grafana
 on:
   push:
     branches:
