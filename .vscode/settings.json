@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "repository-redesign"
+        "repository-redesign",
+        "github-actions"
     ]
 }
