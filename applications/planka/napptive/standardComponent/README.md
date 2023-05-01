@@ -14,7 +14,7 @@ If you don't do this before deployment Planka won't be accessible.
 
 Planka is a free open source kanban board for workgroups.
 
-[![Update Planka in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml)
+[![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
 
  __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
 

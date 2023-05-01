@@ -18,7 +18,7 @@ playground env list
 
 <img src="https://raw.githubusercontent.com/plankanban/planka/master/demo.gif" alt="drawing" width="800"/>
 
-[![Update Planka in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml)
+[![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io). 
 
