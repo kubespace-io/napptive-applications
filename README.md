@@ -1,6 +1,7 @@
 # NAPPTIVE applications
 
 [![Grafana](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml)
+[![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
 
 Currently, this repository is exclusively maintained by [davma.io](https://github.com/davma-io)
 

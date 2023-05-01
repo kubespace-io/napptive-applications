@@ -20,7 +20,7 @@ New versions of this application will only be provided once it has been verified
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
-[![Update Planka in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/planka-actions.yml)
+[![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
