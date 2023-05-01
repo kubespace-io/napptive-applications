@@ -5,8 +5,8 @@ on:
       - 'main'
     paths:
       - "applications/planka/napptive/trialComponent/**"
-      # - "applications/planka/napptive/pvcComponent/**"
-      # - "applications/planka/napptive/standardComponent/**"
+      - "applications/planka/napptive/pvcComponent/**"
+      - "applications/planka/napptive/standardComponent/**"
 jobs:
   deploy:
     name: New version upload
@@ -16,10 +16,10 @@ jobs:
         include:
           - base: 'trial'
             tag: 'trial'
-          # - base: 'standard'
-          #   tag: 'standard'
-          # - base: 'storage'
-          #   tag: 'pvc'
+          - base: 'standard'
+            tag: 'standard'
+          - base: 'storage'
+            tag: 'pvc'
     steps:
       - uses: actions/checkout@v2
       - uses: napptive-actions/catalog-push-action@v5.0.0

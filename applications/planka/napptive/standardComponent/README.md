@@ -1,20 +1,26 @@
 # Planka
 
-Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io). 
+Planka is a free open source kanban board for workgroups.
 
 __Important__: Before deployment the application, you must modify the environment variable BASE_URL for your access url 
 ```
-https://<nameapp>-<active-namespace>.apps.playground.napptive.dev
+https://<nameapp>-<id-namespace>.apps.playground.napptive.dev
+#example: https://kubespace-planka-cd6maeyfdrt9o3ctk9m470.apps.playground.napptive.dev
 ```
 If you don't do this before deployment Planka won't be accessible.
+
+You can get the ``id-namespace`` with the following command:
+```
+playground env list
+```
 
 </br>
 
 <img src="https://raw.githubusercontent.com/plankanban/planka/master/demo.gif" alt="drawing" width="800"/>
 
-Planka is a free open source kanban board for workgroups.
-
 [![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
+
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io). 
 
  __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
 
@@ -24,19 +30,19 @@ For more information, help or specific deployments you can contact [here](mailto
 
 ## How to access to Planka
 
-Once the application has been deployed, open the public endpoint navigating through the web UI to select the application, selecting the davmaio-planka component, and clicking on the associated Endpoint. Alternatively with the CLI use:
+Once the application has been deployed, open the public endpoint navigating through the web UI to select the application, selecting the kubespace-planka component, and clicking on the associated Endpoint. Alternatively with the CLI use:
 
 ```
-playground apps open davmaio-planka
+playground apps open kubespace-planka
 ```
 
-The davmaio-planka instance automatically gets a public URL in the form of:
+The kubespace-planka instance automatically gets a public URL in the form of:
 
 ```
-https://davmaio-planka-<active-namespace>.apps.playground.napptive.dev
+https://kubespace-planka-<id-namespace>.apps.playground.napptive.dev
 ```
 
-You can get the full link in endpoints inside component davmaio-planka
+You can get the full link in endpoints inside component kubespace-planka
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:

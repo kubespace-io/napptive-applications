@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-planka
+  name: kubespace-planka
   annotations:
     version: 1.10.3
     description: "Open Source Identity and Access Management."
 spec:
   components:
-    - name: davmaio-planka
+    - name: kubespace-planka
       type: webservice
       properties:
         image: ghcr.io/plankanban/planka:latest
@@ -30,7 +30,7 @@ spec:
       traits:
         - type: napptive-ingress
           properties:
-            name: davmaio-planka
+            name: kubespace-planka
             port: 1337
             path: /
             rewritePath: /
@@ -52,7 +52,7 @@ spec:
         - name: POSTGRES_HOST_AUTH_METHOD
           value: "trust"
   policies:
-    - name: davmaio-planka-health
+    - name: kubespace-planka-health
       type: health
       properties:
         probeInterval: 5
