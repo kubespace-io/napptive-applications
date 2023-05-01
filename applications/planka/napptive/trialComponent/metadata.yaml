@@ -1,15 +1,14 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
 name: "Planka"
-version: 1.8.4
+version: 1.10.3
 description: Planka is a free open source kanban board for workgroups.
 keywords:
   - "Planka"
   - "Project management application"
   - "Agile methodology"
-  - "davma"
-  - "davma.io"
-license: " MIT license"
+  - "kubespace"
+license: " AGPL-3.0 license"
 url: "https://planka.app"
 doc: "https://github.com/plankanban/planka"
 logo:
