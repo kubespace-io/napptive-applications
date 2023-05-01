@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: davmaio-planka
   annotations:
-    version: 1.8.4
+    version: 1.10.3
     description: "Open Source Identity and Access Management."
 spec:
   components:
@@ -16,17 +16,15 @@ spec:
         ports:
           - port: 1337
             expose: true
-        cpu: "1500m"
+        cpu: "500m"
         memory: "2048Mi"
         env:
         - name: BASE_URL
-          value: "https://<nameapp>-<active-namespace>.apps.playground.napptive.dev"
-        # - name: TRUST_PROXY
-        #   value: "0"
+          value: "https://kubespace-planka-<active-namespace>.apps.playground.napptive.dev"
+        - name: TRUST_PROXY
+          value: "0"
         - name: DATABASE_URL
           value: "postgresql://postgres@postgres-planka:5432/planka"
-        - name: planka_ADMIN_PASSWORD
-          value: "admin"
         - name: SECRET_KEY
           value: "notsecretkey"
       traits:
@@ -42,7 +40,7 @@ spec:
     - name: postgres-planka
       type: webservice
       properties:
-        image: postgres:alpine
+        image: postgres:14-alpine
         cpu: "500m" 
         memory: 512Mi
         ports:

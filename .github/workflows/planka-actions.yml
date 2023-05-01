@@ -1,12 +1,12 @@
-name: Update Planka in to Napptive Playground
+name: Planka
 on:
   push:
     branches:
       - 'main'
     paths:
-      - "planka/napptive/trialComponent/**"
-      - "planka/napptive/componentPROD/**"
-      - "planka/napptive/componentPVC/**"
+      - "applications/planka/napptive/trialComponent/**"
+      # - "applications/planka/napptive/pvcComponent/**"
+      # - "applications/planka/napptive/standardComponent/**"
 jobs:
   deploy:
     name: New version upload
@@ -16,8 +16,8 @@ jobs:
         include:
           - base: 'trial'
             tag: 'trial'
-          - base: 'latest'
-            tag: 'prod'
+          - base: 'standard'
+            tag: 'standard'
           - base: 'storage'
             tag: 'pvc'
     steps:
@@ -26,7 +26,7 @@ jobs:
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./planka/napptive/${{ matrix.tag }}Component/
+          applicationPath: ./applications/planka/napptive/${{ matrix.tag }}Component/
           namespace: "kubespace"
           applicationName: "Planka"
           tag: "${{ matrix.base }}"
