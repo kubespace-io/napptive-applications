@@ -9,7 +9,7 @@ https://<nameapp>-<id-namespace>.apps.playground.napptive.dev
 ```
 If you don't do this before deployment Planka won't be accessible.
 
-You can get the ``id-namespace`` with the following command:
+You can get the __id-namespace__ with the following command:
 ```
 playground env list
 ```
