@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: kubespace-planka
   annotations:
-    version: 1.8.4
+    version: 1.10.3
     description: "Open Source Identity and Access Management."
 spec:
   components:
