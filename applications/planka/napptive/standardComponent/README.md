@@ -46,17 +46,20 @@ The following resources need to be available in your environment for a successfu
 ## References
 * https://planka.app
 * https://github.com/plankanban/planka
+* https://docs.planka.cloud
 
 ## Contact Support
 
-- Email: [contact@davma.io](mailto:contact@davma.io)
-- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
+- Organization's email: [info@kubespace.io](mailto:info@kubespace.io)
+- Owner email: [contact@davma.io](mailto:contact@davma.io)
+- Slack: [kubespace.io](https://join.slack.com/t/kubespaceio/shared_invite/zt-1twwd0egh-L8Hz1qz__BJXPQqOUdy3JA)
 
 </br>
 </br>
 </br>
 
-![https://github.com/davma-io](https://davma.io/wp-content/uploads/2022/05/davma.io6_-e1659187814635.png)
+<img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-white.png" alt="drawing" width="400"/> 
+
 </br>
 </br>
 </br>
