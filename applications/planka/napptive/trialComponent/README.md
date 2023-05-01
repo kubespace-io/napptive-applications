@@ -44,7 +44,7 @@ You can get the full link in endpoints inside component kubespace-planka
 
 ## Minimal resources available
 The following resources need to be available in your environment for a successful deployment:
-- 1.25 cores available
+- 1 cores available
 - 2560 Mb of ram available
 
 ## References
