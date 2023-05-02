@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-n8n
+  name: kubespace-n8n
   annotations:
     version: 'latest'
     description: "n8n is a free and open self hostable workflow automation tool"
 spec:
   components:
-    - name: davmaio-n8n
+    - name: kubespace-n8n
       type: webservice
       properties:
         image: n8nio/n8n:latest
@@ -20,13 +20,13 @@ spec:
           - name: N8N_BASIC_AUTH_ACTIVE
             value: "true"
           - name: N8N_BASIC_AUTH_USER
-            value: davma-n8n
+            value: kubespace
           - name: N8N_BASIC_AUTH_PASSWORD
-            value: davma-n8n@
+            value: kubespace
       traits:
         - type: napptive-ingress         
           properties:
-            name: davmaio-n8n
+            name: kubespace-n8n
             port: 5678
             path: /
             rewritePath: /
@@ -34,7 +34,7 @@ spec:
           properties:
             replicas: 1
   policies:
-    - name: davmaio-n8n-health
+    - name: kubespace-n8n-health
       type: health
       properties:
         probeInterval: 5

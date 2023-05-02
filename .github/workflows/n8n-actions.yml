@@ -1,12 +1,12 @@
-name: Update n8n in to Napptive Playground
+name: n8n
 on:
   push:
     branches:
       - 'main'
     paths:
-      - "n8n/napptive/trialComponent/**"
-      - "n8n/napptive/componentPROD/**"
-      - "n8n/napptive/componentPVC/**"
+      - "applications/n8n/napptive/trialComponent/**"
+      - "applications/n8n/napptive/componentPROD/**"
+      - "applications/n8n/napptive/componentPVC/**"
 jobs:
   deploy:
     name: New version upload
@@ -21,12 +21,12 @@ jobs:
           # - base: 'storage'
           #   tag: 'pvc'
     steps:
-      - uses: actions/checkout@v3
-      - uses: napptive-actions/catalog-push-action@v4.2.0
+      - uses: actions/checkout@v2
+      - uses: napptive-actions/catalog-push-action@v5.0.0
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./n8n/napptive/${{ matrix.tag }}Component/
+          applicationPath: ./applications/n8n/napptive/${{ matrix.tag }}Component/
           namespace: "kubespace"
           applicationName: "n8n"
           tag: "${{ matrix.base }}"
