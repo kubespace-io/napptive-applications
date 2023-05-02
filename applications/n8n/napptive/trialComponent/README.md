@@ -6,6 +6,7 @@ n8n - Free and open self hostable workflow automation tool
 
 <img src="https://app.n8n.cloud/og-image.jpg" alt="drawing" width="600"/>
  
+</br>
 
 [![n8n](https://github.com/kubespace-io/napptive-applications/actions/workflows/n8n-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/n8n-actions.yml)
 

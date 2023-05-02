@@ -6,8 +6,8 @@ description: DokuWiki is a simple to use and highly versatile Open Source wiki s
 keywords:
   - "DokuWiki"
   - "Docs"
-  - "davma"
-  - "davma.io"
+  - "kubespace"
+
 license: "GNU General Public License Version 2"
 url: "https://www.dokuwiki.org/dokuwiki"
 doc: "https://www.dokuwiki.org/install"

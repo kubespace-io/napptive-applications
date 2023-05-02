@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-dokuwiki
+  name: kubespace-dokuwiki
   annotations:
     version: 2022.07.31
     description: "DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database."
 spec:
   components:
-    - name: davmaio-dokuwiki
+    - name: kubespace-dokuwiki
       type: webservice
       properties:
         image: bitnami/dokuwiki:latest
@@ -26,7 +26,7 @@ spec:
       traits:
         - type: napptive-ingress         
           properties:
-            name: davmaio-dokuwiki
+            name: kubespace-dokuwiki
             port: 8080
             path: /
             rewritePath: /
@@ -34,7 +34,7 @@ spec:
           properties:
             replicas: 1
   policies:
-    - name: davmaio-dokuwiki-health
+    - name: kubespace-dokuwiki-health
       type: health
       properties:
         probeInterval: 5
