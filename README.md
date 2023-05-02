@@ -24,6 +24,6 @@ To deploy the components of this repository you will need an account on the [Nap
 
 - Organization's email: [info@kubespace.io](mailto:info@kubespace.io)
 - Owner email: [contact@davma.io](mailto:contact@davma.io)
-- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
+- Slack: [kubespace.io](https://join.slack.com/t/kubespaceio/shared_invite/zt-1twwd0egh-L8Hz1qz__BJXPQqOUdy3JA)
 
 <img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-black.png" width="600"/>
