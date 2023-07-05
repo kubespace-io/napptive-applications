@@ -1,9 +1,9 @@
-name: Build jupyter-tf-dbConnectors
+name: image-jupyterTF-dbConn
 on:
   push:
     branches:
-      # - 'main'
-      - 'packages'
+      - 'main'
+      # - 'packages'
     paths:
       - "images/jupyter/tensorflow-dbConnectors/**"
       - "!images/jupyter/tensorflow-dbConnectors/README.md"
@@ -43,7 +43,6 @@ jobs:
           context: .
           file: ./images/jupyter/tensorflow-dbConnectors/Dockerfile
           push: true
-          tags: kubespacedev/test:${{ matrix.tag }}
-          # tags: ${{ secrets.DOCKER_HUB_USERNAME }}/jupyter-tf-dbconn:${{ matrix.tag }}
+          tags: kubespacedev/jupytertf-dbConn:${{ matrix.tag }}
           build-args: |
             IMAGE=${{ matrix.base }}
