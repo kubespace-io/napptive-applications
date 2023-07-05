@@ -4,6 +4,7 @@
         "github-actions",
         "yaml-component",
         "README",
-        "deployment update"
+        "deployment update",
+        "image-app"
     ]
 }

@@ -1,0 +1,3 @@
+pyodbc==4.0.34
+mysql-connector-python==8.0.33
+psycopg2==2.9.6
