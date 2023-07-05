@@ -23,7 +23,6 @@ RUN echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 # optional: for unixODBC development headers
 RUN apt-get install -y unixodbc-dev
 RUN apt-get install postgresql libpq-dev -y
-# RUN pip install pyodbc==4.0.34
 
 COPY images/jupyter/tensorflow-dbConnectors/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
