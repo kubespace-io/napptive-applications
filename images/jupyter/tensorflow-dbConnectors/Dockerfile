@@ -25,7 +25,7 @@ RUN apt-get install -y unixodbc-dev
 RUN apt-get install postgresql libpq-dev -y
 # RUN pip install pyodbc==4.0.34
 
-COPY requirements.txt requirements.txt
+COPY images/jupyter/tensorflow-dbConnectors/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 USER jovyan
