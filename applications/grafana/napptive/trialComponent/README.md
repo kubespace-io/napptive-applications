@@ -56,7 +56,3 @@ The following resources need to be available in your environment for a successfu
 </br>
 
 <img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-white.png" alt="drawing" width="400"/> 
-
-</br>
-</br>
-</br>
