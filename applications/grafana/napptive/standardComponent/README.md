@@ -4,7 +4,7 @@ Grafana is the open source analytics & monitoring solution for every database.
 
 </br>
 
-![https://github.com/kubespace-io](https://grafana.com/products/assets/grafana/grafana_dashboard_video_wall.png)
+![https://github.com/kubespace-io](https://grafana.com/media/grafana/images/grafana-dashboard-english.png)
 
 [![Grafana](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/grafana-actions.yml) 
 
