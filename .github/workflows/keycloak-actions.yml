@@ -1,4 +1,4 @@
-name: Update Keycloak in to Napptive Playground
+name: Keycloak
 on:
   push:
     branches:
