@@ -1,16 +1,18 @@
-# Minio-test
+# MinIO
 
-Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
+MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service.
 
 </br>
 
 <img src="https://blog.min.io/content/images/2021/04/console_header--2-.png" alt="drawing" width="600"/>
 
-MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service.
+</br>
 
 [![Update Minio in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/minio-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/minio-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
+
+Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 
@@ -20,19 +22,19 @@ For more information, help or specific deployments you can contact [here](mailto
 Once the application has been deployed, open the public endpoint navigating through the web UI to select the application, selecting the minio component, and clicking on the associated Endpoint. Alternatively with the CLI use:
 
 ```
-playground apps open davmaio-minio
+playground apps open kubespace-minio
 ```
 
-The davmaio-minio instance automatically gets a public URL in the form of:
+The kubespace-minio instance automatically gets a public URL in the form of:
 ```
-https://davmaio-minio-<active-namespace>.apps.playground.napptive.dev
+https://kubespace-minio-<active-namespace>.apps.playground.napptive.dev
 ```
-You can get the full link in endpoints inside component davmaio-minio.
+You can get the full link in endpoints inside component kubespace-minio.
 
 ## Admin user and first login
 The default credentials are:
-- User: davma-minio
-- Password: davma-minio@
+- User: kubespace-minio
+- Password: kubespace-minio@
 
 Note: Please remember to change the user/password for the instance. To change credentials
 
@@ -47,14 +49,12 @@ The following resources need to be available in your environment for a successfu
 
 ## Contact Support
 
-- Email: [contact@davma.io](mailto:contact@davma.io)
-- Slack: [davma.io](https://join.slack.com/t/davmaioespacio/shared_invite/zt-1ad2hnzn6-DdMBvCaOPozfVAHhzvlSVQ)
+- Organization's email: [info@kubespace.io](mailto:info@kubespace.io)
+- Owner email: [contact@davma.io](mailto:contact@davma.io)
+- Slack: [kubespace.io](https://join.slack.com/t/kubespaceio/shared_invite/zt-1twwd0egh-L8Hz1qz__BJXPQqOUdy3JA)
 
 </br>
 </br>
 </br>
 
-![https://github.com/davma-io](https://davma.io/wp-content/uploads/2022/05/davma.io6_-e1659187814635.png)
-</br>
-</br>
-</br>
+<img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-white.png" alt="drawing" width="400"/> 
