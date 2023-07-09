@@ -1,13 +1,13 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
 name: "Keycloak"
-version: 19.0.2
+version: 21.1.2
 description: Open Source Identity and Access Management.
 keywords:
   - "Keycloak"
   - "Identity"
-  - "davma"
-  - "davma.io"
+  - "kubespace"
+  - "kubespace.io"
 license: "Apache-2.0 license"
 url: "https://www.keycloak.org/"
 doc: "https://www.keycloak.org/documentation"

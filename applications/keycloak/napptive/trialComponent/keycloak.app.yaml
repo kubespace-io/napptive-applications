@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-keycloak
+  name: kubespace-keycloak
   annotations:
-    version: 19.0.2
+    version: 21.1.2
     description: "Open Source Identity and Access Management."
 spec:
   components:
-    - name: davmaio-keycloak
+    - name: kubespace-keycloak
       type: webservice
       properties:
         image: bitnami/keycloak:latest
@@ -42,7 +42,7 @@ spec:
                 key: password 
         - type: napptive-ingress
           properties:
-            name: davmaio-keycloak
+            name: kubespace-keycloak
             port: 8080
             path: /
             rewritePath: /
@@ -74,7 +74,7 @@ spec:
                 data:
                   password: Y2hhbmdldGhpcw==
   policies:
-    - name: davmaio-keycloak-health
+    - name: keycloak-health
       type: health
       properties:
         probeInterval: 5
