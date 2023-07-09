@@ -4,6 +4,8 @@
 [![Planka](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/planka-actions.yml)
 [![n8n](https://github.com/kubespace-io/napptive-applications/actions/workflows/n8n-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/n8n-actions.yml)
 [![DokuWiki](https://github.com/kubespace-io/napptive-applications/actions/workflows/dokuwiki-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/dokuwiki-actions.yml)
+[![MinIO](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml)
+[![Keycloak](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml)
 
 Currently, this repository is exclusively maintained by [davma.io](https://github.com/davma-io)
 
