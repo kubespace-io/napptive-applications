@@ -6,7 +6,7 @@ Keycloak is a Open Source Identity and Access Management.
 
 <img src="https://www.keycloak.org/resources/images/screen-login.png" alt="drawing" width="600"/>
 
-[![Update Keycloak in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/keycloak-actions.yml)
+[![Keycloak](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
