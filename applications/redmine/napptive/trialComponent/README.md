@@ -8,7 +8,7 @@ Redmine is a flexible project management web application. Written using the Ruby
 
 </br>
 
-[![Update Redmine in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/redmine-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/redmine-actions.yml)
+[![Redmine](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml)
 
 This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
 
