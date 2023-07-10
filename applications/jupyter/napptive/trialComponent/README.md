@@ -17,7 +17,7 @@ __Jupyter Notebook is a web-based interactive computing platform.__
 [![Update Jupyter to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/jupyter-actions.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/davma/jupyter-ultimate?logo=docker&logoColor=white)](https://hub.docker.com/r/davma/jupyter-ultimate)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the standard version for data persistence__. 
 
 ## Pre-installed components
 

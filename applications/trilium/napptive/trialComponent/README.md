@@ -12,7 +12,7 @@ Trilium Notes is a hierarchical note taking application with focus on building l
 
 [![Update Trilium in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/trilium-actions.yml)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the standard version for data persistence__. 
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 

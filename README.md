@@ -24,7 +24,7 @@ To deploy the components of this repository you will need an account on the [Nap
 
 Please note all of the following:
 
-Initially the application deployment configurations listed in this repository for the Napptive platform are designed exclusively for test environments. Eventually configurations for data persistence have been added in some applications.
+Initially the application deployment configurations listed in this repository for the [Napptive platform](https://napptive.com/) are designed exclusively for test environments. Eventually configurations for data persistence have been added in some applications.
 
 Please note that if you use these applications for production environments, you are solely responsible in case of data loss. Always use data persistence, modify the resource limit of the preconfigured applications according to your needs.
 
@@ -32,7 +32,7 @@ At the moment none of the applications are configured to scale in high demand en
 
 ## References
 * https://docs.napptive.com/
-* https://docs.napptive.com/Catalog.html/
+* https://kubevela.io/docs/
 * https://github.com/napptive-actions/catalog-push-action
 
 ## Contact Support

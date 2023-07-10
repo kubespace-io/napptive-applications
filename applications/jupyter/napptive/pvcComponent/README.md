@@ -1,4 +1,4 @@
-# Storage components for davmaio-jupyter production environment
+#  Jupyter storage components
 
 Please READ CAREFULLY before deploying.
 
