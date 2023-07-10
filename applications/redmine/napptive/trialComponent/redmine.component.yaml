@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-redmine
+  name: kubespace-redmine
   annotations:
-    version: 5.0.2
+    version: 5.0.5
     description: "Redmine is a flexible project management web application."
 spec:
   components:
-  - name: davmaio-redmine
+  - name: kubespace-redmine
     type: webservice
     dependsOn:
       - mysql-redmine
@@ -26,7 +26,7 @@ spec:
     traits:
     - type: napptive-ingress         
       properties:
-        name: davmaio-redmine
+        name: kubespace-redmine
         port: 3000
         path: /
     - type: service-binding
@@ -59,7 +59,7 @@ spec:
                 user: cm9vdA==
                 password: Y2hhbmdldGhpcw==
   policies:
-  - name: redmine-test-health
+  - name: redmine-health
     type: health
     properties:
       probeInterval: 5
