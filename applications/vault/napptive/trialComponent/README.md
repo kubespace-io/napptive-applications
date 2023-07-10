@@ -12,7 +12,7 @@ Deployment in the catalog and configuration and in some cases the container imag
 
 Identity-based secrets and encryption management system
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the standard version for data persistence__. 
 
 For more information, help or specific deployments you can contact [here](mailto:contact@davma.io).
 

@@ -10,7 +10,7 @@ MinIO is a High Performance Object Storage released under GNU Affero General Pub
 
 [![MinIO](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for data persistence__. 
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the standard version for data persistence__. 
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io)
 
