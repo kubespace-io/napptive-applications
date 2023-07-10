@@ -8,7 +8,7 @@
 [![Keycloak](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml)
 [![Redmine](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml)
 
-Currently, this repository is exclusively maintained by [davma.io](https://github.com/davma-io)
+<img src="https://raw.githubusercontent.com/kubespace-io/documentation-resources/main/images/catalog-example1.png"/>
 
 ## Repository purpose
 
@@ -45,3 +45,6 @@ At the moment none of the applications are configured to scale in high demand en
 - Slack: [kubespace.io](https://join.slack.com/t/kubespaceio/shared_invite/zt-1twwd0egh-L8Hz1qz__BJXPQqOUdy3JA)
 
 <img src="https://raw.githubusercontent.com/kubespace-io/.github/main/resources/images/kubespace.io-logo-black.png" width="600"/>
+
+
+*Currently, this repository is exclusively maintained by [davma.io](https://github.com/davma-io)*
