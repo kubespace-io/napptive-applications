@@ -10,7 +10,7 @@ Grafana is the open source analytics & monitoring solution for every database.
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](https://github.com/davma-io)
 
- __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__.  
+ __This version of the application is designed for SMALL PRODUCTION ENVIRONMENTS__ . Data persistence only, not configured to scale in high-demand production environments. You can change before deploying the resource limit if you need to increase resources for your project.  
 
 __ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE tag__. 
 
