@@ -20,6 +20,16 @@ Currently, this repository is exclusively maintained by [davma.io](https://githu
 
 To deploy the components of this repository you will need an account on the [Napptive platform](https://napptive.com/). You can deploy the applications, configured in this repository, directly from the platform catalog.
 
+## Limitations
+
+Please note all of the following:
+
+Initially the application deployment configurations listed in this repository for the Napptive platform are designed exclusively for test environments. Eventually configurations for data persistence have been added in some applications.
+
+Please note that if you use these applications for production environments, you are solely responsible in case of data loss. Always use data persistence, modify the resource limit of the preconfigured applications according to your needs.
+
+At the moment none of the applications are configured to scale in high demand environments.
+
 ## References
 * https://docs.napptive.com/
 * https://docs.napptive.com/Catalog.html/
