@@ -12,13 +12,16 @@ Currently, this repository is exclusively maintained by [davma.io](https://githu
 
 ## Repository purpose
 
-1. Increase the catalog of applications that can be deployed from the Napptive Playground interface.
+1. Increase the catalog of applications that can be deployed from the [Napptive Playground](https://playground.napptive.dev/).
 
-2. Keep open source application components up to date.
+2. Maintain updated [OAM components](./applications/) for open source application deployment for the platform.
 
 ## Requirements
 
 To deploy the components of this repository you will need an account on the [Napptive platform](https://napptive.com/). You can deploy the applications, configured in this repository, directly from the platform catalog.
+
+Please note that some of the configured deployments require resources on the platform limited to a paid account. 
+All applications are configured with a basic deployment, for testing purposes, capable of deploying to the free account.
 
 ## Limitations
 
