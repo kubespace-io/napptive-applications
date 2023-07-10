@@ -1,4 +1,4 @@
-# Storage components for davmaio-Vault production environment
+# Vault storage components
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
@@ -8,10 +8,10 @@ Deployment of these components is not possible with a free Napptive account.
 
 Please check that you have at least 800 Mb of storage available in your environment.
 
-__ATTENTION. You must launch this version of the application to deploy storage components to the production environment of davma.io-Vault__.
+__ATTENTION. You must launch this version of the application to deploy storage components to the production environment of kubespace-vault__.
 
 By releasing the storage components separately you are guaranteed.
-- You can kill the davma.io-Vault application without losing the data and use the computing capacity of your environment for other functions.
+- You can kill the kubespace-vault application without losing the data and use the computing capacity of your environment for other functions.
 - You can test future versions/updates quickly by killing the current version and deploying the new one without affecting your stored data.
 
 __ATTENTION. You should under no circumstances remove this deployment from your environment. This will lead to the total loss of your data.__

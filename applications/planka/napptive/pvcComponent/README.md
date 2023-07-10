@@ -1,4 +1,4 @@
-# Storage components for davmaio-Planka production environment
+# Planka storage components
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
