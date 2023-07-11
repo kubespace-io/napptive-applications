@@ -6,7 +6,7 @@ Nextcloud is the most popular on-premises content collaboration platform you can
 
 ![https://github.com/kubespace-io](https://nextcloud.com/media/Nextcloud_Hub_background.png)
 
-[![Update nextcloud in to Napptive Playground](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/davma-io-templates/napptive-template/actions/workflows/nextcloud-actions.yml)
+[![Nextcloud](https://github.com/kubespace-io/napptive-applications/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/nextcloud-actions.yml)
 
 Deployment in the catalog and configuration and in some cases the container image is maintained and updated by [davma.io](mailto:contact@davma.io).
 
