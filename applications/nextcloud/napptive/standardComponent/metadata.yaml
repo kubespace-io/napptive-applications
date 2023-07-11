@@ -5,7 +5,7 @@ version: '24.0.5'
 description: Nextcloud is the most popular on-premises content collaboration platform you can download.
 keywords:
   - "Nextcloud"
-  - "davma.io"
+  - "Kubespace"
 license: "AGPL-3.0 license"
 url: "https://nextcloud.com/"
 doc: "https://nextcloud.com/support/"
