@@ -40,7 +40,7 @@ You can run the image build with the following commands
 ````
 git clone https://github.com/kubespace-io/napptive-applications.git
 cd images/jupyter/tensorflow-dbConnectors
-docker image build --build-arg IMAGE=jupyter/tensorflow-notebook:<VERSION> -t jupyter-tf-db .
+docker image build --build-arg IMAGE=jupyter/tensorflow-notebook:python-<VERSION> -t jupyter-tf-db .
 ````
 
 ## 5.Documentation and guides
@@ -52,6 +52,3 @@ docker image build --build-arg IMAGE=jupyter/tensorflow-notebook:<VERSION> -t ju
 [Docker TensorFlow](https://www.tensorflow.org/install/docker)
 
 [Microsoft ODBC 17](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
-
-
-
