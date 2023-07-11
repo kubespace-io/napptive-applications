@@ -1,12 +1,12 @@
-name: Update Nextcloud in to Napptive Playground
+name: Nextcloud
 on:
   push:
     branches:
       - 'main'
     paths:
-      - "nextcloud/napptive/trialComponent/**"
-      - "nextcloud/napptive/componentPROD/**"
-      - "nextcloud/napptive/componentPVC/**"
+      - "applications/nextcloud/napptive/trialComponent/**"
+      - "applications/nextcloud/napptive/standardComponent/**"
+      - "applications/nextcloud/napptive/pvcComponent/**"
 jobs:
   deploy:
     name: New version upload
@@ -16,8 +16,8 @@ jobs:
         include:
           - base: 'trial'
             tag: 'trial'
-          - base: 'latest'
-            tag: 'prod'
+          - base: 'standard'
+            tag: 'standard'
           - base: 'storage'
             tag: 'pvc'
     steps:
@@ -26,7 +26,7 @@ jobs:
         env:
           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
         with:
-          applicationPath: ./nextcloud/napptive/${{ matrix.tag }}Component/
+          applicationPath: ./applications/nextcloud/napptive/${{ matrix.tag }}Component/
           namespace: "kubespace"
           applicationName: "Nextcloud"
           tag: "${{ matrix.base }}"
