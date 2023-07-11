@@ -1,4 +1,4 @@
-# Jupyter-TensorFlow with db connectors
+# Jupyter-DevOps
 
 ## 1. Features
 
@@ -6,24 +6,27 @@ This image is a modification of the official [jupyter/tensorflow-notebook](https
 
 The following components have been added:
 
-| python libraries |
-| ---|
-| pyodbc==4.0.34 |
-| mysql-connector-python==8.0.33 |
-| psycopg2==2.9.6 |
+| CLI Components | Infrastructure Components | Python libraries |
+|---| ---| ---|
+| Azure CLI | 	Terraform | pyodbc==4.0.34 |
+| AWS CLI | Ansible | mysql-connector-python==8.0.33 |
+| Napptive CLI | kubectl | psycopg2==2.9.6 |
+| | | hvac==1.1.1 |
+| | | azure-identity==1.13.0 |
+| | | azure-keyvault-secrets==4.7.0 |
 
 ## 2. Image tags
 
 You can download the full image from [Docker Hub](https://hub.docker.com/) with the following command.
 
 ````
-docker pull kubespacedev/jupyter-tf-dbconn:latest
+docker pull kubespacedev/jupyter-devops:latest
 ````
 ````
-docker pull kubespacedev/jupyter-tf-dbconn:3.11
+docker pull kubespacedev/jupyter-devops:3.11
 ````
 ````
-docker pull kubespacedev/jupyter-tf-dbconn:3.10
+docker pull kubespacedev/jupyter-devops:3.10
 ````
 
 ## 3. Access to Jupyter
@@ -39,16 +42,15 @@ You can run the image build with the following commands
 
 ````
 git clone https://github.com/kubespace-io/napptive-applications.git
-cd images/jupyter/tensorflow-dbConnectors
-docker image build --build-arg IMAGE=jupyter/tensorflow-notebook:python-<VERSION> -t jupyter-tf-db .
+cd images/jupyter/devops
+docker image build --build-arg IMAGE=jupyter/minimal-notebook:python-<VERSION> -t jupyter-devops .
 ````
 
 ## 5.Documentation and guides
 
 [Jupyter Notebook](https://jupyter.org/)
 
-[TensorFlow](https://www.tensorflow.org/)
+[Microsoft ODBC 18](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
 
-[Docker TensorFlow](https://www.tensorflow.org/install/docker)
 
-[Microsoft ODBC 17](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
+docker pull jupyter/minimal-notebook:python-3.10.11
