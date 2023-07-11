@@ -7,6 +7,7 @@
 [![MinIO](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/minio-actions.yml)
 [![Keycloak](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/keycloak-actions.yml)
 [![Redmine](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/redmine-actions.yml)
+[![Nextcloud](https://github.com/kubespace-io/napptive-applications/actions/workflows/nextcloud-actions.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/nextcloud-actions.yml)
 
 <img src="https://raw.githubusercontent.com/kubespace-io/documentation-resources/main/images/catalog-example1.png"/>
 
