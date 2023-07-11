@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: nextcloud-prod
+  name: nextcloud
   annotations:
     version: '24.0.5'
     description: "Nextcloud is the most popular on-premises content collaboration platform you can download."
 spec:
   components:
-  - name: nextcloud-prod
+  - name: nextcloud
     type: webservice
     dependsOn:
     - postgres-nextcloud
