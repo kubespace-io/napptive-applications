@@ -1,5 +1,8 @@
 # Jupyter-DevOps
 
+[![image-jupyter-devops](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyter-devops.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyter-devops.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/kubespacedev/jupyter-devops?logo=docker&logoColor=white)
+
 ## 1. Features
 
 This image is a modification of the official [jupyter/tensorflow-notebook](https://hub.docker.com/r/jupyter/tensorflow-notebook) image. 
@@ -51,6 +54,3 @@ docker image build --build-arg IMAGE=jupyter/minimal-notebook:python-<VERSION> -
 [Jupyter Notebook](https://jupyter.org/)
 
 [Microsoft ODBC 18](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
-
-
-docker pull jupyter/minimal-notebook:python-3.10.11

@@ -1,5 +1,8 @@
 # Jupyter-TensorFlow with db connectors
 
+[![image-jupyterTF-dbConn](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyterTF-dbConn.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyterTF-dbConn.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/kubespacedev/jupytertf-dbconn?logo=docker&logoColor=white)
+
 ## 1. Features
 
 This image is a modification of the official [jupyter/tensorflow-notebook](https://hub.docker.com/r/jupyter/tensorflow-notebook) image. 

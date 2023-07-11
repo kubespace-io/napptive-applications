@@ -24,6 +24,13 @@ To deploy the components of this repository you will need an account on the [Nap
 Please note that some of the configured deployments require resources on the platform limited to a paid account. 
 All applications are configured with a basic deployment, for testing purposes, capable of deploying to the free account.
 
+## Container images
+
+In addition, some container images have been configured to complete the application testing.
+
+[![image-jupyter-devops](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyter-devops.yml/badge.svg)](https://github.com/kubespace-io/napptive-applications/actions/workflows/image-jupyter-devops.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/kubespacedev/jupyter-devops?logo=docker&logoColor=white)
+
 ## Limitations
 
 Please note all of the following:
